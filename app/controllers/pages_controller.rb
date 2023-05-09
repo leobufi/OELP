@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   def dashboard
     if current_admin.admin?
       @cans = Can.all
+      @brand_infos = BrandInfo.all
     end
   end
 

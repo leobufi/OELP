@@ -9,6 +9,9 @@
           <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="projects">Products</h2>
           <button><%= link_to 'Ajouter', new_can_path %></button>
         </div>
+        <div class="tabs" >
+          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="brand">OELP Informations</h2>
+        </div>
       </div>
     </div>
     <div class="tabs-content">
@@ -31,6 +34,28 @@
             </div>
           </div>
           <% end %>
+        </div>
+        <div class="content" data-tabs-target="panel" data-tab-name="brand" >
+          <div class="">
+            <h3>Brand Informations</h3>
+            <button><%= link_to 'Ajouter', new_can_path %></button>
+            <% @brand_infos.each do |b|%>
+            <hr>
+            <div class="product">
+              <div class="product-title">
+                <div class="infos">
+                  <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=b.title %>"><%=b.title %></h4>
+                  <span><%=b.content %></span>
+                  <span><%=b.side %></span>
+                </div>
+                <div class="buttons">
+                  <button><%= link_to 'Éditer', edit_brand_info_path(b) %></button>
+                  <button><%= link_to "Supprimer", brand_info_path(b), method: :delete, remote: true, data: { confirm: "Are you sure?" } %></button>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
         </div>
       </div>
   </div>
