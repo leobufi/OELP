@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   get 'dashboard', to: 'pages#dashboard'
+  resources :cans, only: [:new, :create, :edit, :update, :destroy]
 
 end

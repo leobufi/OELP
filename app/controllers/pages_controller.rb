@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     if current_admin.admin?
-
+      @cans = Can.all
     end
   end
 
