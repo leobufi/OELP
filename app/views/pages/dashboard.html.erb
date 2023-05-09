@@ -1,1 +1,38 @@
-<h1>Dashboard</h1>
+<div class="container">
+  <div class="page-padding">
+    <div class="page-title">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="section" data-controller="tabs">
+      <div class="section-title">
+        <div class="tabs" >
+          <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="projects">Products</h2>
+          <button><%= link_to 'Ajouter', new_can_path %></button>
+        </div>
+      </div>
+    </div>
+    <div class="tabs-content">
+        <div class="content active" data-tabs-target="panel" data-tab-name="products" >
+          <% @cans.each do |c|%>
+          <hr>
+          <div class="product">
+            <div class="product-title">
+              <div class="infos">
+                <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=c.title %>"><%=c.title %></h4>
+                <span><%=c.content %></span>
+              </div>
+              <div class="product-photo">
+                <%= cl_image_tag c.label.key, height: 150, width: 150, crop: :fill  %>
+              </div>
+              <div class="buttons">
+                <button><%= link_to 'Éditer', edit_can_path(c) %></button>
+                <button><%= link_to "Supprimer", can_path(c), method: :delete, remote: true, data: { confirm: "Are you sure?" } %></button>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>
+<%= console %>
