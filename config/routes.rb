@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'dashboard', to: 'pages#dashboard'
   resources :cans, only: [:new, :create, :edit, :update, :destroy]
+  resources :brand_infos, only: [:new, :create, :edit, :update, :destroy]
 
 end
