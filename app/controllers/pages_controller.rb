@@ -10,6 +10,7 @@ class PagesController < ApplicationController
       @brand_infos = BrandInfo.all
       @baselines = Baseline.all
       @photos = Photo.all
+      @instagrams = Instagram.all
     end
   end
 
