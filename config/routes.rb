@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :brand_infos, only: [:new, :create, :edit, :update, :destroy]
   resources :baselines, only: [:new, :create, :edit, :update, :destroy]
   resources :photos, only: [:new, :create, :edit, :update, :destroy]
+  resources :instagrams, only: [:new, :create, :edit, :update, :destroy]
 end

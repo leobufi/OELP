@@ -1,0 +1,19 @@
+<% if current_admin.admin? %>
+<div class="">
+  <h3> Upload Instagram photos</h3>
+  <%= simple_form_for(@instagram) do |f| %>
+    <%= f.input :top_left_photo, as: :file, label: "Top Left Photo :" %>
+    <%= f.input :top_right_photo, as: :file, label: "Top Right Photo :" %>
+    <%= f.input :bottom_left_photo, as: :file, label: "Bottom Left Photo :" %>
+    <%= f.input :bottom_right_photo, as: :file, label: "Bottom Right Photo :" %>
+    <%= f.input :link, placeholder: "Link to your Instagram account", label: "Link:" %>
+    <button>
+      <%= f.button :submit, "Publish" %>
+    </button>
+  <% end %>
+</div>
+<% else %>
+  <div class="">
+    <p>You're not authorized to access this page.</p>
+  </div>
+<% end  %>

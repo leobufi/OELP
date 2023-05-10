@@ -16,6 +16,10 @@
           <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="photos">Photos</h2>
           <button><%= link_to 'Add', new_photo_path %></button>
         </div>
+        <div class="tabs" >
+          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="instagram">Instagram</h2>
+          <button><%= link_to 'Add', new_instagram_path %></button>
+        </div>
       </div>
     </div>
     <div class="tabs-content">
@@ -94,6 +98,29 @@
               <div class="buttons">
                 <button><%= link_to 'Éditer', edit_photo_path(p) %></button>
                 <button><%= link_to "Supprimer", photo_path(p), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <div class="content" data-tabs-target="panel" data-tab-name="instagram" >
+          <% @instagrams.each do |i|%>
+          <hr>
+          <div class="product">
+            <div class="product-title">
+              <div class="infos">
+                <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=i.link %>">Instagram informations</h4>
+                <span>Link : <%= i.link %></span>
+              </div>
+              <div class="product-photo">
+                <%= cl_image_tag i.top_left_photo.key, height: 150, width: 150, crop: :fill  %>
+                <%= cl_image_tag i.top_right_photo.key, height: 150, width: 150, crop: :fill  %>
+                <%= cl_image_tag i.bottom_left_photo.key, height: 150, width: 150, crop: :fill  %>
+                <%= cl_image_tag i.bottom_right_photo.key, height: 150, width: 150, crop: :fill  %>
+              </div>
+              <div class="buttons">
+                <button><%= link_to 'Éditer', edit_instagram_path(i) %></button>
+                <button><%= link_to "Supprimer", instagram_path(i), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
               </div>
             </div>
           </div>
