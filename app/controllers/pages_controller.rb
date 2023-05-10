@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     if current_admin.admin?
       @cans = Can.all
       @brand_infos = BrandInfo.all
+      @baselines = Baseline.all
     end
   end
 

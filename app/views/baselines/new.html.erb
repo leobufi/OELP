@@ -1,0 +1,15 @@
+<% if current_admin.admin? %>
+<div class="">
+  <h3>Write your baseline</h3>
+  <%= simple_form_for(@baseline) do |f| %>
+    <%= f.input :baseline, placeholder: "Our wines are produced in France by winegrowers who are passionate about their work and their lands.", label: "Baseline:" %>
+   <button>
+      <%= f.button :submit, "Publish" %>
+    </button>
+  <% end %>
+</div>
+<% else %>
+  <div class="">
+    <p>You're not authorized to access this page.</p>
+  </div>
+<% end  %>

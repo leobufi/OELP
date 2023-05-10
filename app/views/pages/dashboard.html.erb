@@ -6,7 +6,7 @@
     <div class="section" data-controller="tabs">
       <div class="section-title">
         <div class="tabs" >
-          <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="projects">Products</h2>
+          <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="products">Products</h2>
           <button><%= link_to 'Ajouter', new_can_path %></button>
         </div>
         <div class="tabs" >
@@ -29,7 +29,7 @@
               </div>
               <div class="buttons">
                 <button><%= link_to 'Éditer', edit_can_path(c) %></button>
-                <button><%= link_to "Supprimer", can_path(c), method: :delete, remote: true, data: { confirm: "Are you sure?" } %></button>
+                <button><%= link_to "Supprimer", can_path(c), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@
         <div class="content" data-tabs-target="panel" data-tab-name="brand" >
           <div class="">
             <h3>Brand Informations</h3>
-            <button><%= link_to 'Ajouter', new_can_path %></button>
+            <button><%= link_to 'Ajouter', new_brand_info_path %></button>
             <% @brand_infos.each do |b|%>
             <hr>
             <div class="product">
@@ -50,7 +50,26 @@
                 </div>
                 <div class="buttons">
                   <button><%= link_to 'Éditer', edit_brand_info_path(b) %></button>
-                  <button><%= link_to "Supprimer", brand_info_path(b), method: :delete, remote: true, data: { confirm: "Are you sure?" } %></button>
+                  <button><%= link_to "Supprimer", brand_info_path(b), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%></button>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+          <hr>
+          <div class="">
+            <h3>Baseline</h3>
+            <button><%= link_to 'Ajouter', new_baseline_path %></button>
+            <% @baselines.each do |base|%>
+            <hr>
+            <div class="product">
+              <div class="product-title">
+                <div class="infos">
+                  <span data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=base.baseline %>"><%=base.baseline %></span>
+                </div>
+                <div class="buttons">
+                  <button><%= link_to 'Éditer', edit_baseline_path(base) %></button>
+                  <button><%= link_to "Supprimer", baseline_path(base), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
                 </div>
               </div>
             </div>
@@ -60,4 +79,4 @@
       </div>
   </div>
 </div>
-<%= console %>
+<%# <%= console %> %>

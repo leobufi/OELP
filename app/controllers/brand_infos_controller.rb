@@ -30,7 +30,6 @@ class BrandInfosController < ApplicationController
   def destroy
     @brand_info = BrandInfo.find(params[:id])
     @brand_info.destroy
-    redirect_to dashboard_path
   end
 
   private
