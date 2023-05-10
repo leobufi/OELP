@@ -9,6 +9,7 @@ class PagesController < ApplicationController
       @cans = Can.all
       @brand_infos = BrandInfo.all
       @baselines = Baseline.all
+      @photos = Photo.all
     end
   end
 

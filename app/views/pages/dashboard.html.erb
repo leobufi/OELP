@@ -7,10 +7,14 @@
       <div class="section-title">
         <div class="tabs" >
           <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="products">Products</h2>
-          <button><%= link_to 'Ajouter', new_can_path %></button>
+          <button><%= link_to 'Add', new_can_path %></button>
         </div>
         <div class="tabs" >
           <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="brand">OELP Informations</h2>
+        </div>
+        <div class="tabs" >
+          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="photos">Photos</h2>
+          <button><%= link_to 'Add', new_photo_path %></button>
         </div>
       </div>
     </div>
@@ -76,7 +80,26 @@
             <% end %>
           </div>
         </div>
+        <div class="content" data-tabs-target="panel" data-tab-name="photos" >
+          <% @photos.each do |p|%>
+          <hr>
+          <div class="product">
+            <div class="product-title">
+              <div class="infos">
+                <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=p.side %>"><%=p.side %></h4>
+              </div>
+              <div class="product-photo">
+                <%= cl_image_tag p.photo.key, height: 150, width: 150, crop: :fill  %>
+              </div>
+              <div class="buttons">
+                <button><%= link_to 'Éditer', edit_photo_path(p) %></button>
+                <button><%= link_to "Supprimer", photo_path(p), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
       </div>
   </div>
 </div>
-<%# <%= console %> %>
+<%# <%= console %>
