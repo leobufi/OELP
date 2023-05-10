@@ -30,7 +30,6 @@ class CansController < ApplicationController
   def destroy
     @can = Can.find(params[:id])
     @can.destroy
-    redirect_to dashboard_path
   end
 
   private

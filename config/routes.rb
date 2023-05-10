@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   resources :cans, only: [:new, :create, :edit, :update, :destroy]
   resources :brand_infos, only: [:new, :create, :edit, :update, :destroy]
+  resources :baselines, only: [:new, :create, :edit, :update, :destroy]
 
 end
