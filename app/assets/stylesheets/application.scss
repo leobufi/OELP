@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 2.6em;
   font-family: $title-font;
 
   .small {
@@ -40,6 +40,11 @@ h3 {
 
 h4 {
   font-size: 2.25em;
+  font-family: $title-font;
+}
+
+h5 {
+  font-size: 1.5em;
   font-family: $title-font;
 }
 
