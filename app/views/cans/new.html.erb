@@ -1,20 +1,28 @@
 <% if current_admin.admin? %>
-<div class="">
-  <h3> Upload a product</h3>
-  <%= simple_form_for(@can) do |f| %>
-    <%= f.input :title, placeholder: "Name", label: "Name:" %>
-    <br>
-    <%= f.rich_text_area :content, placeholder: "Informations", label: "Informations:" %>
-    <br>
-    <%= f.input :color, placeholder: "Color", label: "Color (put the Hex code):" %>
-    <%= f.input :label, as: :file, label: "Label :" %>
-    <button>
-      <%= f.button :submit, "Publish" %>
-    </button>
-  <% end %>
+<div class="container">
+  <div class="page-padding">
+    <div class="page-title">
+      <h3> Upload a product</h3>
+    </div>
+    <div class="form">
+      <%= simple_form_for(@can) do |f| %>
+        <%= f.input :title, placeholder: "Name", label: "Name:" %>
+        <br>
+        <%= f.rich_text_area :content, placeholder: "Informations", label: "Informations:" %>
+        <br>
+        <%= f.input :color, placeholder: "Color", label: "Color (put the Hex code):" %>
+        <%= f.input :label, as: :file, label: "Label :" %>
+        <div class="form-button">
+          <button>
+            <%= f.button :submit, "Publish" %>
+          </button>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% else %>
-  <div class="">
+  <div class="container">
     <p>You're not authorized to access this page.</p>
   </div>
 <% end  %>

@@ -1,0 +1,21 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+
+// Define fonts for body and headers
+$body-font: "Apfel G Regular", "Helvetica", "sans-serif";
+$title-font: "Apfel G Fett", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif";
+
+// To use a font file (.woff) uncomment following lines
+@font-face {
+  font-family: "Apfel G Fett";
+  font-weight: 700;
+  font-style: bold;
+  src: font-url('ApfelGrotezk-Fett.woff') format('woff'),
+}
+@font-face {
+  font-family: "Apfel G Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: font-url('ApfelGrotezk-Regular.woff') format('woff'),
+}

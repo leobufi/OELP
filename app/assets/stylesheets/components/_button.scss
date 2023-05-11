@@ -1,0 +1,25 @@
+button {
+  padding: 0.5em 1em;
+  border: solid 1px $black;
+  border-radius: 25px;
+  background-color: $white;
+
+  &:hover {
+    background-color: $rose;
+
+    a {
+      color: $black;
+    }
+  }
+
+
+  input {
+    background-color: transparent;
+    border: none;
+    color: $white;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
