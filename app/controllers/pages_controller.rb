@@ -2,6 +2,11 @@ class PagesController < ApplicationController
   before_action :authenticate_admin!, only: :dashboard
 
   def home
+    @cans = Can.all
+    @brand_infos = BrandInfo.all
+    @baselines = Baseline.all
+    @photos = Photo.all
+    @instagrams = Instagram.all
   end
 
   def dashboard
