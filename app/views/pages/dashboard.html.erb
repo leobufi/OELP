@@ -1,157 +1,173 @@
 <div class="container">
   <div class="page-padding">
-    <div class="page-title">
+    <div class="page-title dashboard-title">
       <h1>Dashboard</h1>
       <button>
       <%= link_to "Go to oelp.fun", root_path %>
       </button>
     </div>
     <div class="section" data-controller="tabs">
-      <div class="section-title">
-        <div class="tabs" >
-          <h2 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="products">Products</h2>
-          <button><%= link_to 'Add', new_can_path %></button>
+      <div class="section-dashboard">
+        <div class="section-title">
+          <div class="tabs" >
+            <h3 class="active" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="products">Products</h3>
+          </div>
+          <div class="tabs" >
+            <h3 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="brand">OELP Informations</h3>
+          </div>
+          <div class="tabs" >
+            <h3 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="photos">Photos</h3>
+            <%# <button>
+              <%= link_to 'Add', new_photo_path %>
+            <%# </button> %>
+          </div>
+          <div class="tabs" >
+            <h3 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="instagram">Instagram</h3>
+            <%# <button>
+              <%= link_to 'Add', new_instagram_path %>
+            <%# </button> %>
+          </div>
         </div>
-        <div class="tabs" >
-          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="brand">OELP Informations</h2>
-        </div>
-        <div class="tabs" >
-          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="photos">Photos</h2>
-          <button><%= link_to 'Add', new_photo_path %></button>
-        </div>
-        <div class="tabs" >
-          <h2 class="" data-tabs-target="tab" data-action="click->tabs#activate" data-tab-name="instagram">Instagram</h2>
-          <button><%= link_to 'Add', new_instagram_path %></button>
-        </div>
-      </div>
-    </div>
-    <div class="tabs-content">
-        <div class="content active" data-tabs-target="panel" data-tab-name="products" >
-          <% @cans.each do |c|%>
-          <div class="product">
-            <div class="product-title">
-              <div class="product-photo">
-                <%= cl_image_tag c.label.key %>
+        <div class="tabs-content">
+          <div class="content active" data-tabs-target="panel" data-tab-name="products" >
+            <div class="add-btn">
+              <button><%= link_to 'Add a new product', new_can_path %></button>
+            </div>
+            <% @cans.each do |c|%>
+            <div class="product">
+              <div class="product-title">
+                <div class="product-photo">
+                  <%= cl_image_tag c.label.key %>
+                </div>
+                <div class="infos">
+                  <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=c.title %>"><%=c.title %></h4>
+                  <span><%=c.content %></span>
+                </div>
               </div>
-              <div class="infos">
-                <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=c.title %>"><%=c.title %></h4>
-                <span><%=c.content %></span>
+              <div class="buttons">
+                <button><%= link_to 'Edit', edit_can_path(c) %></button>
+                <button><%= link_to "Delete", can_path(c), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
               </div>
             </div>
-            <div class="buttons">
-              <button><%= link_to 'Edit', edit_can_path(c) %></button>
-              <button><%= link_to "Delete", can_path(c), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
+            <% end %>
+          </div>
+          <div class="content" data-tabs-target="panel" data-tab-name="brand" >
+            <div class="brand-infos">
+              <div class="title-btn">
+                <h3 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="baseline">Baseline</h3>
+                <button data-tabs-target="title" data-action="click->tabs#show" data-tab-name="baseline">↓</button>
+              </div>
+              <% @baselines.each do |base|%>
+              <div class="brand-product" data-tabs-target="project" data-tab-name="baseline">
+                <div class="product-title">
+                  <div class="infos">
+                    <span><%=base.baseline %></span>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button><%= link_to 'Edit', edit_baseline_path(base) %></button>
+                  <%# <button>
+                    <%= link_to "Delete", baseline_path(base), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+                  <%# </button> %>
+                </div>
+              </div>
+              <% end %>
+            </div>
+            <div class="brand-infos">
+              <div class="title-btn">
+                <h3 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="brand-infos">Brand Informations</h3>
+                <button data-tabs-target="title" data-action="click->tabs#show" data-tab-name="brand-infos">↓</button>
+              </div>
+              <% @brand_infos.each do |b|%>
+              <div class="brand-product" data-tabs-target="project" data-tab-name="brand-infos">
+                <div class="product-title">
+                  <div class="infos">
+                    <div class="title">
+                      <h5><%=b.title %></h5>
+                      <span> • Position: <%=b.side %> • </span>
+                    </div>
+                    <span><%=b.content %></span>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button><%= link_to 'Edit', edit_brand_info_path(b) %></button>
+                  <%# <button>
+                    <%= link_to "Delete", brand_info_path(b), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
+                  <%# </button> %>
+                </div>
+              </div>
+              <% end %>
             </div>
           </div>
-          <% end %>
-        </div>
-        <div class="content" data-tabs-target="panel" data-tab-name="brand" >
-          <div class="brand-infos">
-            <div class="title-btn">
-              <h3>Brand Informations</h3>
-              <button><%= link_to 'Add', new_brand_info_path %></button>
+          <div class="content" data-tabs-target="panel" data-tab-name="photos" >
+            <% @photos.each do |p|%>
+            <div class="product">
+              <div class="product-title">
+                <div class="infos">
+                  <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=p.side %>"><%=p.side %></h4>
+                  <div class="product-photo">
+                    <%= cl_image_tag p.photo.key %>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">
+                <button><%= link_to 'Edit', edit_photo_path(p) %></button>
+                <%# <button>
+                  <%= link_to "Delete", photo_path(p), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+                <%# </button> %>
+              </div>
             </div>
-            <% @brand_infos.each do |b|%>
+            <% end %>
+          </div>
+          <div class="content" data-tabs-target="panel" data-tab-name="instagram" >
+            <% @instagrams.each do |i|%>
             <div class="product">
               <div class="product-title">
                 <div class="infos">
                   <div class="title">
-                    <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=b.title %>"><%=b.title %></h4>
-                    <span> • Position: <%=b.side %> • </span>
+                    <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=i.link %>">Instagram informations</h4>
+                    <span> • <a href="<%= i.link %>"><%= i.link %></a> • </span>
                   </div>
-                  <span><%=b.content %></span>
+                  <div class="instagram-photos">
+                    <div class="card">
+                      <span>Top Left</span>
+                      <div class="product-photo">
+                        <%= cl_image_tag i.top_left_photo.key %>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span>Top Right</span>
+                      <div class="product-photo">
+                        <%= cl_image_tag i.top_right_photo.key %>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span>Bottom Left</span>
+                      <div class="product-photo">
+                        <%= cl_image_tag i.bottom_left_photo.key %>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <span>Bottom Right</span>
+                      <div class="product-photo">
+                        <%= cl_image_tag i.bottom_right_photo.key %>
+                      </div>
+                    </div>
                 </div>
               </div>
+              </div>
               <div class="buttons">
-                <button><%= link_to 'Edit', edit_brand_info_path(b) %></button>
-                <button><%= link_to "Delete", brand_info_path(b), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%></button>
+                <button><%= link_to 'Edit', edit_instagram_path(i) %></button>
+                <%# <button>
+                  <%= link_to "Delete", instagram_path(i), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+                <%# </button> %>
               </div>
             </div>
             <% end %>
           </div>
-          <div class="brand-infos">
-            <div class="title-btn">
-              <h3>Baseline</h3>
-              <button><%= link_to 'Add', new_baseline_path %></button>
-            </div>
-            <% @baselines.each do |base|%>
-            <div class="product">
-              <div class="product-title">
-                <div class="infos">
-                  <span data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=base.baseline %>"><%=base.baseline %></span>
-                </div>
-              </div>
-              <div class="buttons">
-                <button><%= link_to 'Edit', edit_baseline_path(base) %></button>
-                <button><%= link_to "Delete", baseline_path(base), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
-              </div>
-            </div>
-            <% end %>
-          </div>
-        </div>
-        <div class="content" data-tabs-target="panel" data-tab-name="photos" >
-          <% @photos.each do |p|%>
-          <div class="product">
-            <div class="product-title">
-              <div class="infos">
-                <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=p.side %>"><%=p.side %></h4>
-                <div class="product-photo">
-                  <%= cl_image_tag p.photo.key %>
-                </div>
-              </div>
-            </div>
-            <div class="buttons">
-              <button><%= link_to 'Edit', edit_photo_path(p) %></button>
-              <button><%= link_to "Delete", photo_path(p), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
-            </div>
-          </div>
-          <% end %>
-        </div>
-        <div class="content" data-tabs-target="panel" data-tab-name="instagram" >
-          <% @instagrams.each do |i|%>
-          <div class="product">
-            <div class="product-title">
-              <div class="infos">
-                <div class="title">
-                  <h4 data-tabs-target="title" data-action="click->tabs#show" data-tab-name="<%=i.link %>">Instagram informations</h4>
-                  <span> • <a href="<%= i.link %>"><%= i.link %></a> • </span>
-                </div>
-                <div class="instagram-photos">
-                  <div class="card">
-                    <span>Top Left</span>
-                    <div class="product-photo">
-                      <%= cl_image_tag i.top_left_photo.key %>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <span>Top Right</span>
-                    <div class="product-photo">
-                      <%= cl_image_tag i.top_right_photo.key %>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <span>Bottom Left</span>
-                    <div class="product-photo">
-                      <%= cl_image_tag i.bottom_left_photo.key %>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <span>Bottom Right</span>
-                    <div class="product-photo">
-                      <%= cl_image_tag i.bottom_right_photo.key %>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            </div>
-            <div class="buttons">
-              <button><%= link_to 'Edit', edit_instagram_path(i) %></button>
-              <button><%= link_to "Delete", instagram_path(i), method: :delete, remote: true, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></button>
-            </div>
-          </div>
-          <% end %>
         </div>
       </div>
+    </div>
   </div>
 </div>
 <%# <%= console %>

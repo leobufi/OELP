@@ -2,6 +2,21 @@
   display: flex;
   justify-content: space-between;
   padding: 3.5em 0em;
+
+
+    background-color: $green;
+    padding: 2em;
+    border: 1px solid $black;
+    border-radius: 50px;
+    margin: 2em 0em;
+}
+
+
+.section-dashboard {
+  background-color: $white;
+  padding: 2em;
+  border: 1px solid $black;
+  border-radius: 50px;
 }
 
 .section-title {
@@ -16,8 +31,7 @@
   justify-content: space-between;
   row-gap: 1em;
   align-items: center;
-  border-right: solid 1px $black;
-  padding-right: 3em;
+  // border-right: solid 1px $black;
   cursor: pointer;
 
   .active {
@@ -32,7 +46,7 @@
 }
 
 .content {
-  // display: none;
+  display: none;
 
   &.active {
     display: flex;
@@ -42,10 +56,22 @@
 
 .product {
   padding: 1.5em 0em;
-  border-bottom: solid 1px $black;
+  // border-bottom: solid 1px $black;
   display: flex;
   justify-content: space-between;
   column-gap: 2em;
+}
+
+.brand-product {
+  display: none;
+
+  &.show {
+    padding: 1.5em 0em;
+    // border-bottom: solid 1px $black;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2em;
+  }
 }
 
 .product-title {
@@ -72,6 +98,7 @@
   padding: 1.5em 0em;
 
   .title-btn {
+    cursor: pointer;
     display: flex;
     column-gap: 2em;
     padding-bottom: 0.5em;
@@ -82,17 +109,15 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   row-gap: 1em;
 }
 
-.product-content {
-  display: none;
+.add-btn {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2em;
+  border-bottom: dashed 1px $black;
 
-  &.show {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .instagram-photos {
@@ -109,9 +134,10 @@
 }
 
 .product-photo {
-  border: solid 1px $white;
+  // border: solid 1px $white;
 
   img {
+    border-radius: 5px;
     width: 200px;
     height: 150px;
     object-fit: cover;
