@@ -1,1 +1,100 @@
-<h1>HELLO</h1>
+<div class="home-hero">
+  <div class="home-section top">
+    <div class="wave">
+      <%= image_tag("yellow up.png") %>
+    </div>
+  </div>
+  <div class="home-section yellow">
+    <div class="wave">
+      <%= image_tag("blue up.png") %>
+    </div>
+  </div>
+  <div class="home-section brand min-h">
+    <div class="left-side-umbrella">
+      <%= image_tag("UMBRELLA GREEN.svg") %>
+    </div>
+    <div class="page-padding brand">
+      <div class="baseline">
+        <% @baselines.each do |b| %>
+          <p><%= b.baseline %></p>
+        <% end %>
+      </div>
+      <div class="brand-infos">
+        <% @brand_infos.where(side: "Left").each do |b| %>
+          <div class="infos">
+            <h3><%= b.title %></h3>
+            <p><%= b.content %></p>
+          </div>
+        <% end %>
+        <% @brand_infos.where(side: "Right").each do |b| %>
+          <div class="infos">
+            <h3><%= b.title %></h3>
+            <p><%= b.content %></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="cheers">
+        <div class="small-cans">
+          <%= image_tag("Rose Front & Back small.png") %>
+        </div>
+        <div class="text">
+          <h2>Tchin tchin !</h2>
+          <h2>Cheers !</h2>
+        </div>
+        <div class="small-cans">
+          <%= image_tag("White Front & Back small.png") %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-section images">
+    <div class="wave-down">
+      <%= image_tag("blue down.png") %>
+    </div>
+    <div class="photos-wrapper">
+      <% @photos.where(side: "Left").each do |p| %>
+        <div class="photo left">
+          <%= cl_image_tag p.photo.key %>
+        </div>
+      <% end %>
+      <% @photos.where(side: "Right").each do |p| %>
+        <div class="photo">
+          <%= cl_image_tag p.photo.key %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="home-section yellow">
+      <div class="wave">
+      <%= image_tag("blue up.png") %>
+    </div>
+  </div>
+  <div class="home-section instagram">
+    <div class="page-padding insta">
+      <% @instagrams.each do |insta| %>
+        <div class="top-left">
+          <%= cl_image_tag insta.top_left_photo.key %>
+        </div>
+        <div class="top-right">
+          <%= cl_image_tag insta.top_right_photo.key %>
+        </div>
+        <div class="bottom-left">
+          <%= cl_image_tag insta.bottom_left_photo.key %>
+        </div>
+        <div class="bottom-right">
+          <%= cl_image_tag insta.bottom_right_photo.key %>
+        </div>
+      <% end %>
+      <div class="insta-title-link">
+        <h1>Join us on our Instagram</h1>
+        <div class="insta-link">
+          <% @instagrams.each do |insta| %>
+            <a href="<%= insta.link %>"><i class="fa-brands fa-instagram"></i></a>
+          <% end %>
+          <div class="insta-link layer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

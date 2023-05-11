@@ -10,7 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "font-awesome";
 
+body {
+  // width: ;
+  font-size: 1rem;
+}
 h1 {
   font-size: 4.5em;
   font-family: $title-font;
@@ -49,7 +54,11 @@ h5 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.8em;
+}
+
+.trix-content {
+  font-size: 1.8em;
 }
 
 span {
