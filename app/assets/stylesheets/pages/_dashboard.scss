@@ -1,0 +1,119 @@
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5em 0em;
+}
+
+.section-title {
+  display : flex;
+  justify-content: space-between;
+  column-gap: 1em;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1em;
+  align-items: center;
+  border-right: solid 1px $black;
+  padding-right: 3em;
+  cursor: pointer;
+
+  .active {
+    color: $rose;
+  }
+}
+
+.tabs-content {
+  margin-top: 1em;
+  padding-top: 2em;
+  border-top: solid 1px $black;
+}
+
+.content {
+  // display: none;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product {
+  padding: 1.5em 0em;
+  border-bottom: solid 1px $black;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2em;
+}
+
+.product-title {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2em;
+  align-items: center;
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1em;
+
+    .title {
+      display: flex;
+      column-gap: 1em;
+      align-items: center;
+    }
+  }
+}
+
+.brand-infos {
+  padding: 1.5em 0em;
+
+  .title-btn {
+    display: flex;
+    column-gap: 2em;
+    padding-bottom: 0.5em;
+
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 1em;
+}
+
+.product-content {
+  display: none;
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.instagram-photos {
+  display: flex;
+  // grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+  padding: 1em 0em;
+
+  span {
+    padding-left: 1em;
+  }
+
+}
+
+.product-photo {
+  border: solid 1px $white;
+
+  img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+}

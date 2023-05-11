@@ -1,17 +1,70 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
 
- @import "bootstrap/scss/bootstrap"
+// External libraries
+@import "bootstrap/scss/bootstrap";
+// @import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+h1 {
+  font-size: 4.5em;
+  font-family: $title-font;
+
+  .colored {
+    color: $rose;
+  }
+
+  &.colored {
+    color: $rose;
+  }
+}
+
+h2 {
+  font-size: 3em;
+  font-family: $title-font;
+}
+
+h3 {
+  font-size: 3em;
+  font-family: $title-font;
+
+  .small {
+    font-size: 0.3em;
+  }
+}
+
+h4 {
+  font-size: 2.25em;
+  font-family: $title-font;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+span {
+  font-size: 1.2em;
+}
+
+a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    color: $rose;
+  }
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+}

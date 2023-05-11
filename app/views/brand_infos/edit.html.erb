@@ -1,19 +1,27 @@
 <% if current_admin.admin? %>
-<div class="">
-  <h3> Update infos on your brand</h3>
-  <%= simple_form_for(@brand_info) do |f| %>
-    <%= f.input :title, placeholder: "Le vin c'est la terre / Wine is the earth", label: "Baseline:" %>
-    <br>
-    <%= f.rich_text_area :content, placeholder: "All of our wines are organic to respect the ...", label: "Description:" %>
-    <br>
-    <%= f.input :side, as: :radio_buttons, collection: ["Left", "Right"], label: "Position:" %>
-    <button>
-      <%= f.button :submit, "Publish" %>
-    </button>
-  <% end %>
+<div class="container">
+  <div class="page-padding">
+    <div class="page-title">
+      <h3> Update infos on your brand</h3>
+    </div>
+    <div class="form">
+      <%= simple_form_for(@brand_info) do |f| %>
+        <%= f.input :title, placeholder: "Le vin c'est la terre / Wine is the earth", label: "Title:" %>
+        <br>
+        <%= f.rich_text_area :content, placeholder: "All of our wines are organic to respect the ...", label: "Description:" %>
+        <br>
+        <%= f.input :side, as: :radio_buttons, collection: ["Left", "Right"], label: "Position:" %>
+        <div class="form-button">
+          <button>
+            <%= f.button :submit, "Publish" %>
+          </button>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% else %>
-  <div class="">
+  <div class="container">
     <p>You're not authorized to access this page.</p>
   </div>
 <% end  %>
