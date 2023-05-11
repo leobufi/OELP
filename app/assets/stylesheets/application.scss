@@ -12,6 +12,10 @@
 @import "pages/index";
 @import "font-awesome";
 
+body {
+  // width: ;
+  font-size: 1rem;
+}
 h1 {
   font-size: 4.5em;
   font-family: $title-font;
