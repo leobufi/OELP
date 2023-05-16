@@ -12,6 +12,83 @@ button {
     }
   }
 
+  &.contact {
+    background-color: $rose;
+    border-radius: 50px;
+    font-size: 2em;
+
+    &.top {
+      position: relative;
+      z-index: 1000;
+
+      &:hover {
+        transform: translate(-5px, 5px);
+        transition-property: transform;
+        transition-duration: 1s;
+
+        a {
+          color: $green;
+        }
+      }
+    }
+
+
+    &.layer {
+      background-color: $dark-blue;
+      color: $dark-blue;
+      position: absolute;
+      top: 5px;
+      left: -5px;
+    }
+
+  }
+
+  &.insta-btn {
+    padding: 1em;
+    border: 1px solid $black;
+    border-radius: 50px;
+    background-color: $green;
+    width: 75px;
+    height:75px;
+
+    &.top {
+        position: relative;
+        z-index: 1000;
+
+        a {
+
+          i {
+            font-size: 2em;
+          }
+        }
+
+        &:hover {
+          transform: translate(-5px, 5px);
+          transition-property: transform;
+          transition-duration: 1s;
+
+          a {
+
+            i {
+              font-size: 2em;
+            }
+
+            &:hover {
+              color: $black;
+            }
+          }
+        }
+      }
+
+
+    &.layer {
+        background-color: $dark-blue;
+        color: $dark-blue;
+        position: absolute;
+        top: 5px;
+        left: -5px;
+      }
+  }
 
   input {
     background-color: transparent;

@@ -1,7 +1,7 @@
 .page-title {
   display: flex;
   justify-content: space-between;
-  padding: 3.5em 0em;
+  padding: 4em 0em;
   background-color: $green;
   padding: 2em;
   border: 1px solid $black;
@@ -12,7 +12,7 @@
 
 .section-dashboard {
   background-color: $white;
-  padding: 2em;
+  padding: 3em;
   border: 1px solid $black;
   border-radius: 50px;
 }
@@ -88,6 +88,10 @@
       display: flex;
       column-gap: 1em;
       align-items: center;
+
+      a {
+        font-size: 1em;
+      }
     }
   }
 }

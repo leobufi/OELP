@@ -1,7 +1,15 @@
 .home-section {
   width: 100vw;
-  height: 80vh;
+  height: 110vh;
   position: relative;
+
+  &.min-h {
+    height: 80vh;
+  }
+
+  &.max-h {
+    min-height: 120vh;
+  }
 
   &.yellow {
     background-color: $yellow;
@@ -27,6 +35,14 @@
     }
   }
 
+  .nimbus {
+
+    h1 {
+      font-family: $headers-font;
+      color: $dark-blue;
+    }
+  }
+
   .left-side-umbrella {
     position: absolute;
     top: 0em;
@@ -39,12 +55,39 @@
     }
   }
 
-  &.min-h {
-    min-height: 100vh;
+  &.top {
+    display: flex;
+    justify-content: center;
+    padding: 4em 2em 0em 2em;
+
+    .logo {
+
+      .letters {
+        display: flex;
+
+        img {
+          width: 5em;
+        }
+      }
+
+    }
+
+  }
+
+  &.cans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em 2em 2em;
+
+    .section-title {
+
+    }
   }
 
   .brand {
-    padding: 3em 10em;
+    padding: 3em 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,8 +109,11 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          row-gap: 1em;
           text-align: center;
+
+          .trix-content {
+            font-size: 2em;
+          }
         }
     }
 
@@ -76,10 +122,12 @@
       justify-content: center;
       align-items: center;
       column-gap: 2em;
+      z-index: 100;
 
       .small-cans {
+
         img {
-          width: 10em;
+          width: 20em;
           object-fit: cover;
         }
       }
@@ -90,23 +138,93 @@
     }
   }
 
-  .photos-wrapper {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    border-bottom: solid 3px $black;
+  &.images {
 
-    .photo {
+    .photos-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      border-bottom: solid 3px $black;
 
-      &.left {
-        border-right: solid 3px $black;
+      .photo {
+
+        &.left {
+          border-right: solid 3px $black;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
+    }
+  }
+
+  &.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    padding: 2em;
+    position: relative;
+
+    h1{
+      font-size: 7em;
+    }
+
+    .you {
+      position: absolute;
+      top: 8em;
+      left: 25em;
+      transform: rotate(-20deg);
+    }
+
+    .wanna {
+      position: absolute;
+      top: 7em;
+      right: 20em;
+      transform: rotate(30deg);
+    }
+
+    .order {
+      position: absolute;
+      top: 20em;
+      left: 20em;
+      transform: rotate(-10deg);
+    }
+
+    .some {
+      position: absolute;
+      bottom: 20em;
+      right: 10em;
+      transform: rotate(10deg);
+    }
+
+    .contact-green-umbrella {
+
+      position: absolute;
+      bottom: 13em;
+      left: 7em;
+      transform: rotate(-25deg);
 
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+          width: 18em;
+        }
+    }
+
+    .contact-pink-umbrella {
+      position: absolute;
+      bottom: 1em;
+      left: 5em;
+      transform: rotate(25deg);
+
+      img {
+        width: 18em;
       }
+    }
+    .contact-btn {
+      position: relative;
     }
   }
 
@@ -114,7 +232,6 @@
 
     .insta {
       height: 100%;
-      padding: 2em 23em;
       display: flex;
       justify-content: center;
 
@@ -128,7 +245,7 @@
           object-fit: cover;
           border: solid 1px $black;
           border-radius: 25%;
-          width: 15em;
+          width: 20em;
         }
       }
 
@@ -142,7 +259,7 @@
           object-fit: cover;
           border: solid 1px $black;
           border-radius: 25%;
-          width: 15em;
+          width: 20em;
         }
       }
 
@@ -156,7 +273,7 @@
           object-fit: cover;
           border: solid 1px $black;
           border-radius: 25%;
-          width: 15em;
+          width: 20em;
         }
       }
 
@@ -170,7 +287,7 @@
           object-fit: cover;
           border: solid 1px $black;
           border-radius: 25%;
-          width: 15em;
+          width: 20em;
         }
       }
 
@@ -181,30 +298,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding: 0em 30em;
 
         .insta-link {
-          width: 5em;
-          height: 5em;
-          padding: 1em;
-          border: 1px solid $dark-blue;
-          border-radius: 50%;
-          background-color: $green;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           position: relative;
-
-          i {
-            font-size: 2em;
-          }
-
-          &.layer {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            z-index: -10;
-            background-color: $dark-blue;
-          }
         }
       }
     }
