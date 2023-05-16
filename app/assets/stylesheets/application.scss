@@ -13,11 +13,11 @@
 @import "font-awesome";
 
 body {
-  // width: ;
-  font-size: 1rem;
+  font-size: 1vw;
 }
+
 h1 {
-  font-size: 4.5em;
+  font-size: 5em;
   font-family: $title-font;
 
   .colored {
@@ -30,12 +30,12 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 3.5em;
   font-family: $title-font;
 }
 
 h3 {
-  font-size: 2.6em;
+  font-size: 3em;
   font-family: $title-font;
 
   .small {
@@ -49,36 +49,38 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: $title-font;
 }
 
 p {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 .trix-content {
-  font-size: 1.8em;
+  font-size: 1.2em;
 }
 
 span {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 a {
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
   color: $black;
 
   &:hover {
     color: $rose;
   }
-
-  i {
-    font-size: 1.5em;
-  }
 }
 
 .container {
   margin: 0 auto;
+}
+
+.home-hero {
+  width: 100%;
+  max-width: 100em;
+  overflow: hidden;
 }
