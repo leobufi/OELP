@@ -1,0 +1,38 @@
+<div class="home-section brand max-h">
+  <div class="left-side-umbrella">
+    <%= image_tag("SVG/OELP_parasol_vert.svg") %>
+  </div>
+  <div class="page-padding brand">
+    <div class="baseline">
+      <% @baselines.each do |b| %>
+        <p><%= b.baseline %></p>
+      <% end %>
+    </div>
+    <div class="brand-infos">
+      <% @brand_infos.where(side: "Left").each do |b| %>
+        <div class="infos">
+          <h2><%= b.title %></h2>
+          <p><%= b.content %></p>
+        </div>
+      <% end %>
+      <% @brand_infos.where(side: "Right").each do |b| %>
+        <div class="infos">
+          <h2><%= b.title %></h2>
+          <p><%= b.content %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="cheers">
+      <div class="small-cans">
+        <%= image_tag("rose_front_back_small.png") %>
+      </div>
+      <div class="text">
+        <h2>Tchin tchin !</h2>
+        <h2>Cheers !</h2>
+      </div>
+      <div class="small-cans">
+        <%= image_tag("white_front_back_small.png") %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+.home-section {
+  &.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    position: relative;
+
+    h1 {
+      font-size: 7em;
+    }
+
+    .you {
+      position: absolute;
+      top: 8em;
+      left: 25em;
+      transform: rotate(-20deg);
+    }
+
+    .wanna {
+      position: absolute;
+      top: 7em;
+      right: 20em;
+      transform: rotate(30deg);
+    }
+
+    .order {
+      position: absolute;
+      top: 20em;
+      left: 20em;
+      transform: rotate(-10deg);
+    }
+
+    .some {
+      position: absolute;
+      bottom: 20em;
+      right: 10em;
+      transform: rotate(10deg);
+    }
+
+    .contact-green-umbrella {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 11em;
+      left: 4em;
+
+      img {
+        width: 25em;
+      }
+    }
+
+    .contact-mouette {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 8em;
+      left: 40em;
+
+      img {
+        width: 13em;
+      }
+    }
+
+    .glace-1 {
+      z-index: 9;
+      position: absolute;
+      top: 10em;
+      right: 10em;
+      transform: rotate(-20deg);
+
+      img {
+        width: 10em;
+      }
+    }
+
+    .contact-pink-umbrella {
+      position: absolute;
+      bottom: 1em;
+      left: 5em;
+      transform: rotate(25deg);
+
+      img {
+        width: 18em;
+      }
+    }
+
+    .contact-btn {
+      position: relative;
+    }
+  }
+}

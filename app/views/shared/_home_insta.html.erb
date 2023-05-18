@@ -1,0 +1,25 @@
+<div class="home-section instagram">
+  <div class="page-padding insta">
+    <% @instagrams.each do |insta| %>
+      <div class="top-left">
+        <%= cl_image_tag insta.top_left_photo.key %>
+      </div>
+      <div class="top-right">
+        <%= cl_image_tag insta.top_right_photo.key %>
+      </div>
+      <div class="bottom-left">
+        <%= cl_image_tag insta.bottom_left_photo.key %>
+      </div>
+      <div class="bottom-right">
+        <%= cl_image_tag insta.bottom_right_photo.key %>
+      </div>
+    <div class="insta-title-link">
+      <h1>Join us on our Instagram</h1>
+      <div class="insta-link">
+        <button class="insta-btn top"><a href="<%=insta.link%>"><i class="fa-brands fa-instagram"></a></i></button>
+        <button class="insta-btn layer"><i class="fa-brands fa-instagram"></i></button>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
