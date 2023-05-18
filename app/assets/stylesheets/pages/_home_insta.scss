@@ -1,0 +1,80 @@
+.home-section {
+  &.instagram {
+
+    .insta {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      .top-left {
+        position: absolute;
+        top: 0em;
+        left: 9em;
+        transform: rotate(-40deg);
+
+        img {
+          object-fit: cover;
+          border: solid 1px $black;
+          border-radius: 25%;
+          width: 20em;
+        }
+      }
+
+      .top-right {
+        position: absolute;
+        top: 3em;
+        right: 12em;
+        transform: rotate(30deg);
+
+        img {
+          object-fit: cover;
+          border: solid 1px $black;
+          border-radius: 25%;
+          width: 20em;
+        }
+      }
+
+      .bottom-left {
+        position: absolute;
+        bottom: 4em;
+        left: 13em;
+        transform: rotate(15deg);
+
+        img {
+          object-fit: cover;
+          border: solid 1px $black;
+          border-radius: 25%;
+          width: 20em;
+        }
+      }
+
+      .bottom-right {
+        position: absolute;
+        bottom: 4em;
+        right: 10em;
+        transform: rotate(-20deg);
+
+        img {
+          object-fit: cover;
+          border: solid 1px $black;
+          border-radius: 25%;
+          width: 20em;
+        }
+      }
+
+      .insta-title-link {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0em 30em;
+
+        .insta-link {
+          position: relative;
+        }
+      }
+    }
+  }
+}

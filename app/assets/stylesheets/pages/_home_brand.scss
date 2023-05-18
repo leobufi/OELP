@@ -1,0 +1,53 @@
+.home-section {
+  .brand {
+    padding: 3em 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4em;
+
+    .baseline {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .brand-infos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      column-gap: 3em;
+
+      .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        .trix-content {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .cheers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 2em;
+      z-index: 100;
+
+      .small-cans {
+
+        img {
+          width: 20em;
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
