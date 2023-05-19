@@ -1,19 +1,25 @@
-<div class="home-section yellow contact">
-    <div class="you nimbus"><h1>You</h1></div>
-    <div class="wanna nimbus"><h1>wanna</h1></div>
-    <div class="order nimbus"><h1>order</h1></div>
-    <div class="some nimbus"><h1>some?</h1></div>
+<div class="home-section yellow contact" data-scrolled-animations-target="contactPosition" data-action="scroll@window->scrolled-animations#fontGrow">
+    <div class="you nimbus" data-scrolled-animations-target="word"><h1>You</h1></div>
+    <div class="wanna nimbus" data-scrolled-animations-target="word"><h1>wanna</h1></div>
+    <div class="order nimbus" data-scrolled-animations-target="word"><h1>order</h1></div>
+    <div class="some nimbus" data-scrolled-animations-target="word"><h1>some?</h1></div>
     <div class="contact-green-umbrella">
       <%= image_tag("SVG/OELP_umbrella_green_shadow_4.svg") %>
     </div>
     <div class="contact-mouette">
       <%= image_tag("SVG/OELP_mouette_posee_ombre.svg") %>
     </div>
+    <div class="contact-bubble" data-scrolled-animations-target="bubble">
+      <%= image_tag("OELP_bubble.svg") %>
+      <div class="bubble-text">
+        <span>DON'T BE AFFRAID TO CLICK!</span>
+      </div>
+    </div>
     <div class="glace-1">
       <%= image_tag("SVG/OELP_glace.svg") %>
     </div>
     <div class="contact-btn">
-      <button class="contact top">Contact us!</button>
+      <button class="contact top" data-action="mouseout->scrolled-animations#hoverBtn">Contact us!</button>
       <button class="contact layer">Contact us!</button>
       <div class="contact-pink-umbrella">
         <%= image_tag("SVG/OELP_parasol_rose.svg") %>

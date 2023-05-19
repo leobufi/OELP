@@ -7,6 +7,14 @@
     align-items: center;
     padding: 2em 2em 2em 2em;
 
-    .section-title {}
+    .section-title {
+
+      &.translate {
+        transform: translateY(-12em);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
+    }
+
   }
 }

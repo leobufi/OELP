@@ -18,12 +18,24 @@
           border-radius: 25%;
           width: 20em;
         }
+
+        &.translate {
+          transform: rotate(360deg);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 24em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
+        }
       }
 
       .top-right {
         position: absolute;
         top: 3em;
-        right: 12em;
+        right: 10em;
         transform: rotate(30deg);
 
         img {
@@ -31,6 +43,18 @@
           border: solid 1px $black;
           border-radius: 25%;
           width: 20em;
+        }
+
+        &.translate {
+          transform: rotate(345deg);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 24em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
         }
       }
 
@@ -46,6 +70,18 @@
           border-radius: 25%;
           width: 20em;
         }
+
+        &.translate {
+          transform: rotate(345deg);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+              width: 24em;
+              transition-property: width;
+              transition-duration: 2s;
+            }
+        }
       }
 
       .bottom-right {
@@ -59,6 +95,18 @@
           border: solid 1px $black;
           border-radius: 25%;
           width: 20em;
+        }
+
+        &.translate {
+          transform: rotate(345deg);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 24em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
         }
       }
 
