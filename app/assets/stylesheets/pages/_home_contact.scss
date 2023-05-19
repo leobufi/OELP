@@ -16,6 +16,12 @@
       top: 8em;
       left: 25em;
       transform: rotate(-20deg);
+
+      &.translate {
+        transform: translate(-2em, -4em);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
     }
 
     .wanna {
@@ -23,6 +29,12 @@
       top: 7em;
       right: 20em;
       transform: rotate(30deg);
+
+      &.translate {
+          transform: translate(9em, -4em);
+          transition-property: transform;
+          transition-duration: 2s;
+        }
     }
 
     .order {
@@ -30,6 +42,19 @@
       top: 20em;
       left: 20em;
       transform: rotate(-10deg);
+
+      &.translate {
+        transform: translate(-8em, 0em);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
+
+      &.untranslate {
+        transform: translate(0em, 0em);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
+
     }
 
     .some {
@@ -37,6 +62,12 @@
       bottom: 20em;
       right: 10em;
       transform: rotate(10deg);
+
+      &.translate {
+          transform: translate(2em, -8em);
+          transition-property: transform;
+          transition-duration: 2s;
+        }
     }
 
     .contact-green-umbrella {
@@ -52,14 +83,36 @@
     }
 
     .contact-mouette {
-      display: flex;
-      flex-direction: column;
       position: absolute;
       bottom: 8em;
       left: 40em;
 
       img {
-        width: 13em;
+        width: 8em;
+      }
+    }
+
+    .contact-bubble {
+      display: none;
+
+      &.active {
+        display: block;
+        position: absolute;
+        bottom: 15em;
+        left: 44em;
+        z-index: 100000;
+
+        img {
+          width: 20em;
+        }
+
+        .bubble-text {
+          position: absolute;
+          bottom: 2em;
+          left: 2em;
+          font-size: 1em;
+          padding: 2.5em;
+        }
       }
     }
 

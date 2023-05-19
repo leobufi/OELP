@@ -1,6 +1,9 @@
-<div class="home-section brand max-h">
+<div class="home-section brand max-h" data-scrolled-animations-target="brandPosition" data-action="scroll@window->scrolled-animations#translateX">
   <div class="left-side-umbrella">
     <%= image_tag("SVG/OELP_parasol_vert.svg") %>
+  </div>
+  <div class="right-side-mouette" data-scrolled-animations-target="mouette">
+    <%= image_tag("SVG/OELP_mouette_vol_2.svg") %>
   </div>
   <div class="page-padding brand">
     <div class="baseline">
@@ -8,7 +11,7 @@
         <p><%= b.baseline %></p>
       <% end %>
     </div>
-    <div class="brand-infos">
+    <div class="brand-infos" data-action="scroll@window->scrolled-animations#translateX">
       <% @brand_infos.where(side: "Left").each do |b| %>
         <div class="infos">
           <h2><%= b.title %></h2>

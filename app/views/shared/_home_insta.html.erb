@@ -1,16 +1,16 @@
-<div class="home-section instagram">
+<div class="home-section instagram" data-scrolled-animations-target="instaPosition" data-action="scroll@window->scrolled-animations#instaGrow">
   <div class="page-padding insta">
     <% @instagrams.each do |insta| %>
-      <div class="top-left">
+      <div class="top-left" data-scrolled-animations-target="insta">
         <%= cl_image_tag insta.top_left_photo.key %>
       </div>
-      <div class="top-right">
+      <div class="top-right" data-scrolled-animations-target="insta">
         <%= cl_image_tag insta.top_right_photo.key %>
       </div>
-      <div class="bottom-left">
+      <div class="bottom-left" data-scrolled-animations-target="insta">
         <%= cl_image_tag insta.bottom_left_photo.key %>
       </div>
-      <div class="bottom-right">
+      <div class="bottom-right" data-scrolled-animations-target="insta">
         <%= cl_image_tag insta.bottom_right_photo.key %>
       </div>
     <div class="insta-title-link">
