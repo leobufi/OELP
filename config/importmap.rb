@@ -7,3 +7,5 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
+pin "three", to: "https://ga.jspm.io/npm:three@0.152.2/build/three.module.js"
+pin "three/addons", to: "https://ga.jspm.io/npm:three@0.152.2/examples/jsm/loaders/GLTFLoader.js"

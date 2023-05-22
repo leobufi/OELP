@@ -1,8 +1,14 @@
-  <div class="home-section yellow cans" data-action="scroll@window->scrolled-animations#translate">
+  <div class="home-section yellow max-h cans" data-action="scroll@window->scrolled-animations#translate">
     <div class="section-title nimbus" data-scrolled-animations-target="can">
       <h1>Organic french wine in a can</h1>
     </div>
-    <div class="wave" data-scrolled-animations-target="canPosition">
+    <div class="three-canvas" data-scrolled-animations-target="canPosition">
+      <% @cans.each do |can| %>
+        <div class="canva" data-three-target="canva" data-controller="three">
+        </div>
+      <% end %>
+    </div>
+    <div class="wave">
       <%= image_tag("OELP_vague_bleue_up.svg") %>
     </div>
   </div>
