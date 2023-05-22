@@ -4,7 +4,18 @@
     </div>
     <div class="three-canvas" data-scrolled-animations-target="canPosition">
       <% @cans.each do |can| %>
-        <div class="canva" data-three-target="canva" data-controller="three">
+        <div class="canva"
+          style="background-color: <%= can.color %>"
+          data-three-target="canva"
+          data-controller="three"
+          data-three-label-value="<%= cl_image_path can.label.key %>"
+          >
+            <div class="infos">
+                <span style="color: <%= can.color %>">i</span>
+                <div class="bubble">
+                  <p><%= can.content %>
+                </div>
+            </div>
         </div>
       <% end %>
     </div>
