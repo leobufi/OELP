@@ -24,6 +24,10 @@
         justify-content: center;
         text-align: center;
 
+        &.left {
+          z-index: -100;
+        }
+
         .trix-content {
           font-size: 2em;
         }
@@ -37,11 +41,15 @@
       column-gap: 2em;
       z-index: 100;
 
-      .small-cans {
+      .can-illus {
 
         img {
           width: 20em;
           object-fit: cover;
+        }
+
+        &.flipped {
+          transform: scaleX(-1);
         }
       }
 
@@ -72,10 +80,11 @@
 
     img {
       width: 17em;
+      transform: scaleX(-1);
     }
 
     &.translate {
-      transform: translate(-85em, 20em);
+      transform: translate(-100em, 20em);
       transition-property: transform;
       transition-duration: 8s;
     }

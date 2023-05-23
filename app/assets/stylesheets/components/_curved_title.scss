@@ -1,0 +1,79 @@
+.curved-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3.5em;
+
+  .line1 {
+    display: flex;
+    column-gap: 0.5em;
+
+    .O {
+      transform: translate(20px, 85px) rotate(-30deg);
+    }
+
+    .r {
+      transform: translate(13px, 60px) rotate(-25deg);
+    }
+
+    .g {
+      transform: translate(6px, 40px) rotate(-20deg);
+    }
+
+    .a {
+      transform: translate(3px, 23px) rotate(-15deg);
+    }
+
+    .n {
+      transform: translate(2px, 12px) rotate(-7deg);
+    }
+
+    .i {
+      transform: translate(1px, 8px) rotate(-5deg);
+    }
+
+    .c {
+      transform: translate(0px, 5px) rotate(0deg);
+    }
+
+    .space {
+      width: 0.5em;
+      transform: translate(0px, 5px) rotate(0deg);
+    }
+
+    .f {
+      transform: translate(-1px, 8px) rotate(5deg);
+    }
+
+    .r2 {
+      transform: translate(-2px, 14px) rotate(10deg);
+    }
+
+    .e {
+      transform: translate(-12px, 23px) rotate(24deg);
+    }
+
+    .n2 {
+      transform: translate(-12px, 40px) rotate(20deg);
+    }
+
+    .c2 {
+      transform: translate(-17px, 64px) rotate(25deg);
+    }
+    .h {
+      transform: translate(-27px, 94px) rotate(30deg);
+    }
+  }
+
+  .line2 {
+    display: flex;
+    column-gap: 0.5em;
+
+    .space {
+      width: 0.5em;
+      transform: translate(2px, 12px) rotate(-7deg);
+    }
+  }
+
+}

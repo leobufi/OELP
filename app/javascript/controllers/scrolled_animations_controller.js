@@ -2,7 +2,20 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="scrolled-animations"
 export default class extends Controller {
-  static targets = ["bubble", "can", "mouette", "word", "insta", "canPosition", "brandPosition", "contactPosition", "instaPosition"]
+  static targets = [
+    "bubble",
+    "title",
+    "star",
+    "mouette",
+    "mouette2",
+    "word",
+    "insta",
+    "canPosition",
+    "mouettePosition",
+    "mouettePosition2",
+    "contactPosition",
+    "instaPosition"
+  ]
 
   connect() {
     console.log("Connected to Scrolled Animations")
@@ -11,21 +24,42 @@ export default class extends Controller {
   translate() {
     let position = this.canPositionTarget.getBoundingClientRect()
     let coordinates = position.y - window.innerHeight;
-    console.log()
-    this.canTargets.forEach (can => {
-      if (coordinates <= 0) {
+    console.log(coordinates, window.innerHeight, position.y)
+    this.titleTargets.forEach (can => {
+      if (coordinates <= 0 ) {
         can.classList.add("translate")
       } else {
         can.classList.remove("translate")
       }
     })
+
+    this.starTargets.forEach (star => {
+      if (coordinates <= 0) {
+        star.classList.add("translate")
+      } else {
+        star.classList.remove("translate")
+      }
+    })
   }
 
   translateX() {
-    let position = this.brandPositionTarget.getBoundingClientRect()
+    let position = this.mouettePositionTarget.getBoundingClientRect()
     let coordinates = position.y - window.innerHeight;
     console.log()
     this.mouetteTargets.forEach (mouette => {
+      if (coordinates <= 0) {
+        mouette.classList.add("translate")
+      } else {
+        mouette.classList.remove("translate")
+      }
+    })
+  }
+
+  translateX2() {
+    let position = this.mouettePosition2Target.getBoundingClientRect()
+    let coordinates = position.y - window.innerHeight;
+    console.log()
+    this.mouette2Targets.forEach (mouette => {
       if (coordinates <= 0) {
         mouette.classList.add("translate")
       } else {
