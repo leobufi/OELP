@@ -20,7 +20,7 @@
         }
 
         &.translate {
-          transform: rotate(360deg);
+          transform: translate(2em, -7em) rotate(360deg);
           transition-property: transform;
           transition-duration: 2s;
 
@@ -46,7 +46,7 @@
         }
 
         &.translate {
-          transform: rotate(345deg);
+          transform: translate(5em, -3em) rotate(345deg);
           transition-property: transform;
           transition-duration: 2s;
 
@@ -72,7 +72,7 @@
         }
 
         &.translate {
-          transform: rotate(345deg);
+          transform: translate(-3em, -5em) rotate(345deg);
           transition-property: transform;
           transition-duration: 2s;
 
@@ -98,7 +98,7 @@
         }
 
         &.translate {
-          transform: rotate(345deg);
+          transform: translate(2em, -1em) rotate(345deg);
           transition-property: transform;
           transition-duration: 2s;
 
@@ -121,6 +121,18 @@
 
         .insta-link {
           position: relative;
+        }
+      }
+
+      .glace-1 {
+        z-index: 9;
+        position: absolute;
+        top: 30em;
+        right: 46em;
+        transform: rotate(-20deg);
+
+        img {
+          width: 10em;
         }
       }
     }

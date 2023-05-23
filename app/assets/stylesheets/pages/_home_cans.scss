@@ -4,21 +4,86 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    row-gap: 5em;
+    row-gap: 4em;
     align-items: center;
     padding: 20em 4em 8em 4em;
 
     .section-title {
       z-index: 1000;
+      text-align: center;
+      letter-spacing: 0.25em;
+      padding: 0em 13em;
+
+
+      h1 {
+        font-size: 6.5em;
+        line-height: 1.5em;
+      }
 
       &.translate {
-        transform: translateY(-6em);
+        transform: translateY(-5em);
         transition-property: transform;
         transition-duration: 3s;
+      }
+
+      &.untranslate {
+        transform: translateY(5em);
+        transition-property: transform;
+        transition-duration: 3s;
+      }
+
+
+    }
+
+    .stars {
+
+      .stars0 {
+        position: absolute;
+        top: 24em;
+        right: 23em;
+
+        img {
+          width: 2em;
+        }
+
+        &.translate {
+          transform: translate(-3em, -8em);
+          transition-property: transform;
+          transition-duration: 3s;
+        }
+
+        &.untranslate {
+          transform: translate(3em, 8em);
+          transition-property: transform;
+          transition-duration: 3s;
+        }
+      }
+
+      .stars1 {
+        position: absolute;
+        top: 30em;
+        left: 32em;
+
+        img {
+          width: 2.5em;
+        }
+
+        &.translate {
+          transform: translate(-5em, -4em);
+          transition-property: transform;
+          transition-duration: 3s;
+        }
+
+        &.untranslate {
+          transform: translate(-5em, -4em);
+          transition-property: transform;
+          transition-duration: 3s;
+        }
       }
     }
 
     .three-canvas {
+      position: relative;
       display: flex;
       justify-content: space-between;
       column-gap: 5em;
@@ -71,6 +136,7 @@
               left: 5em;
               width: 16em;
               display: flex;
+              flex-direction: column;
               justify-content: flex-start;
               align-items: flex-start;
               padding: 2em;
@@ -82,8 +148,39 @@
           }
         }
       }
-    }
 
+      .cans-perso {
+        position: absolute;
+        top: -14.7em;
+        left: 2em;
+
+        img {
+          width: 22em;
+        }
+      }
+
+      .cans-glaciere {
+        position: absolute;
+        top: -14em;
+        right: -6em;
+        z-index: -1;
+
+        img {
+          width: 20em;
+        }
+      }
+
+      .cans-tonneaux {
+        position: absolute;
+        bottom: -6em;
+        right: 25em;
+        z-index: -1;
+
+        img {
+          width: 18em;
+        }
+      }
+    }
 
   }
 }

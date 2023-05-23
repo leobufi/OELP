@@ -1,9 +1,9 @@
-<div class="home-section mid-h brand" data-scrolled-animations-target="brandPosition" data-action="scroll@window->scrolled-animations#translateX">
+<div class="home-section mid-h brand" data-scrolled-animations-target="mouettePosition" data-action="scroll@window->scrolled-animations#translateX">
   <div class="left-side-umbrella">
     <%= image_tag("SVG/OELP_parasol_vert.svg") %>
   </div>
   <div class="right-side-mouette" data-scrolled-animations-target="mouette">
-    <%= image_tag("SVG/OELP_mouette_vol_2.svg") %>
+    <%= image_tag("SVG/OELP_mouette1.svg") %>
   </div>
   <div class="page-padding brand">
     <div class="baseline">
@@ -13,7 +13,7 @@
     </div>
     <div class="brand-infos" data-action="scroll@window->scrolled-animations#translateX">
       <% @brand_infos.where(side: "Left").each do |b| %>
-        <div class="infos">
+        <div class="infos left">
           <h2><%= b.title %></h2>
           <p><%= b.content %></p>
         </div>
@@ -26,15 +26,15 @@
       <% end %>
     </div>
     <div class="cheers">
-      <div class="small-cans">
-        <%= image_tag("rose_front_back_small.png") %>
+      <div class="can-illus flipped">
+        <%= image_tag("SVG/OELP_verre.svg") %>
       </div>
       <div class="text">
         <h2>Tchin tchin !</h2>
         <h2>Cheers !</h2>
       </div>
-      <div class="small-cans">
-        <%= image_tag("white_front_back_small.png") %>
+      <div class="can-illus">
+        <%= image_tag("SVG/OELP_bouteilles.svg") %>
       </div>
     </div>
   </div>

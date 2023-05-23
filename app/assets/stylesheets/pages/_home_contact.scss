@@ -18,7 +18,7 @@
       transform: rotate(-20deg);
 
       &.translate {
-        transform: translate(-2em, -4em);
+        transform: translate(-5em, -2em) rotate(-15deg);
         transition-property: transform;
         transition-duration: 2s;
       }
@@ -31,7 +31,7 @@
       transform: rotate(30deg);
 
       &.translate {
-          transform: translate(9em, -4em);
+          transform: translate(9em, -3em) rotate(-10deg);
           transition-property: transform;
           transition-duration: 2s;
         }
@@ -44,13 +44,7 @@
       transform: rotate(-10deg);
 
       &.translate {
-        transform: translate(-8em, 0em);
-        transition-property: transform;
-        transition-duration: 2s;
-      }
-
-      &.untranslate {
-        transform: translate(0em, 0em);
+        transform: translate(-8em, 0em) rotate(10deg);
         transition-property: transform;
         transition-duration: 2s;
       }
@@ -64,21 +58,75 @@
       transform: rotate(10deg);
 
       &.translate {
-          transform: translate(2em, -8em);
+          transform: translate(2em, -8em) rotate(-10deg);
           transition-property: transform;
           transition-duration: 2s;
         }
     }
 
-    .contact-green-umbrella {
-      display: flex;
-      flex-direction: column;
+    .left-side-mouette {
       position: absolute;
-      bottom: 11em;
-      left: 4em;
+      top: 3em;
+      left: 0em;
 
       img {
-        width: 25em;
+        width: 17em;
+      }
+
+      &.translate {
+        transform: translate(100em, 20em);
+        transition-property: transform;
+        transition-duration: 8s;
+      }
+    }
+
+    .scene-1 {
+      position: absolute;
+      bottom: 13em;
+      left: 7em;
+
+      .parasol-1 {
+        z-index: 10;
+        position: absolute;
+        bottom: -5em;
+        left: 5em;
+
+        img {
+          width: 25em;
+        }
+      }
+
+      .serviette-2 {
+        z-index: 9;
+        position: absolute;
+        bottom: -6em;
+        left: 1em;
+
+        img {
+          width: 15em;
+        }
+      }
+
+      .glaciere-2 {
+        z-index: 9;
+        position: absolute;
+        bottom: -1em;
+        left: 8em;
+
+        img {
+          width: 8em;
+        }
+      }
+
+      .verre-3 {
+        z-index: 9;
+        position: absolute;
+        bottom: -5em;
+        left: 10em;
+
+        img {
+          width: 6em;
+        }
       }
     }
 
@@ -98,8 +146,8 @@
       &.active {
         display: block;
         position: absolute;
-        bottom: 15em;
-        left: 44em;
+        bottom: 14em;
+        left: 43em;
         z-index: 100000;
 
         img {
@@ -116,15 +164,15 @@
       }
     }
 
-    .glace-1 {
+    .glaciere {
       z-index: 9;
       position: absolute;
-      top: 10em;
-      right: 10em;
-      transform: rotate(-20deg);
+      bottom: 5em;
+      right: -5em;
+      transform: rotate(-52deg);
 
       img {
-        width: 10em;
+        width: 15em;
       }
     }
 

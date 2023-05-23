@@ -11,7 +11,7 @@ export default class extends Controller {
   static targets = ["canva"]
 
   connect() {
-    console.log("Hi from three js", this.canvaTarget, this.canvaTarget.offsetWidth, this.canvaTarget.offsetHeight);
+    // console.log("Hi from three js", this.canvaTarget, this.canvaTarget.offsetWidth, this.canvaTarget.offsetHeight);
 
     this.scene = new THREE.Scene();
     // this.scene.background = new THREE.Color("rgb(254, 223, 146)");
@@ -36,7 +36,7 @@ export default class extends Controller {
     this.element.appendChild( this.renderer.domElement );
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    console.log(this.controls);
+    // console.log(this.controls);
     this.controls.maxDistance = 10;
     this.controls.minDistance = 5;
     this.controls.minPolarAngle = 0.5;
@@ -110,7 +110,7 @@ export default class extends Controller {
         this.model.receiveShadow = true;
         this.model.castShadow = true;
         this.scene.add(this.model);
-        console.log(this.model);
+        // console.log(this.model);
       });
     }
 

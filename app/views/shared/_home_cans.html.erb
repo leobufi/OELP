@@ -1,6 +1,14 @@
   <div class="home-section yellow max-h cans" data-action="scroll@window->scrolled-animations#translate">
-    <div class="section-title nimbus" data-scrolled-animations-target="can">
-      <h1>Organic french wine in a can</h1>
+    <div class="section-title nimbus" data-scrolled-animations-target="title">
+      <%= render 'shared/curved_title' %>
+    </div>
+    <div class="stars">
+      <div class="stars0" data-scrolled-animations-target="star">
+      <%= image_tag("SVG/OELP_stars.svg") %>
+      </div>
+      <div class="stars1" data-scrolled-animations-target="star">
+      <%= image_tag("SVG/OELP_stars.svg") %>
+      </div>
     </div>
     <div class="three-canvas" data-scrolled-animations-target="canPosition">
       <% @cans.each do |can| %>
@@ -13,11 +21,21 @@
             <div class="infos">
                 <span style="color: <%= can.color %>">i</span>
                 <div class="bubble">
+                  <h5><%= can.title %></h5>
                   <p><%= can.content %>
                 </div>
             </div>
         </div>
       <% end %>
+      <div class="cans-perso">
+       <%= image_tag("SVG/OELP_perso1.svg") %>
+      </div>
+      <div class="cans-glaciere">
+       <%= image_tag("SVG/OELP_glacière.svg") %>
+      </div>
+      <div class="cans-tonneaux">
+       <%= image_tag("SVG/OELP_tonneaux.svg") %>
+      </div>
     </div>
     <div class="wave">
       <%= image_tag("OELP_vague_bleue_up.svg") %>

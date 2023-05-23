@@ -1,5 +1,8 @@
 <div class="home-section instagram" data-scrolled-animations-target="instaPosition" data-action="scroll@window->scrolled-animations#instaGrow">
   <div class="page-padding insta">
+    <div class="glace-1">
+      <%= image_tag("SVG/OELP_glace.svg") %>
+    </div>
     <% @instagrams.each do |insta| %>
       <div class="top-left" data-scrolled-animations-target="insta">
         <%= cl_image_tag insta.top_left_photo.key %>
