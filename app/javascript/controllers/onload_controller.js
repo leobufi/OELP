@@ -19,6 +19,10 @@ export default class extends Controller {
     this.fadeOut();
     this.fadeIn();
     this.canFall();
+    setTimeout(() => {
+      this.loaderTarget.classList.remove("loader");
+      this.loaderTarget.classList.remove("fade-out");
+    }, 2000);
   }
 
   loader() {
@@ -26,6 +30,13 @@ export default class extends Controller {
       loader.classList.add("fade-out");
     })
   }
+
+  // remove() {
+  //   this.loaderTargets.forEach(loader => {
+  //     loader.classList.remove("loader");
+  //     loader.classList.remove("fade-out");
+  //   })
+  // }
 
   birdFly() {
     this.mouette1Targets.forEach(mouette => {
