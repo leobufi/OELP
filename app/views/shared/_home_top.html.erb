@@ -2,14 +2,6 @@
   <div class="logo-wrapper">
     <div class="logo animate__animated animate__pulse animate__infinite">
       <%= image_tag("LOGO/OELP_logo.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_o.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_u.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_e.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_s.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_t.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_l.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_a.svg") %>
-      <%# <%= image_tag("LOGO/OELP_logo_plage.svg") %>
     </div>
   </div>
   <div class="sun animate__animated animate__pulse animate__infinite">
@@ -17,7 +9,10 @@
   </div>
   <div class="scene-1">
     <div class="parasol-1">
-      <%= image_tag("SVG/OELP_umbrella_sparkling_shadow_3.svg") %>
+      <%= image_tag("SVG/OELP_parasol_jaune.png") %>
+    </div>
+    <div class="ombre-1">
+      <%= image_tag("SVG/OELP_ombre_parasol_4.svg") %>
     </div>
     <div class="serviette-2">
       <%= image_tag("SVG/OELP_serviette_1.svg") %>
@@ -25,8 +20,8 @@
     <div class="glaciere-2">
       <%= image_tag("SVG/OELP_glacière2.svg") %>
     </div>
-    <div class="verre-3">
-      <%= image_tag("SVG/OELP_verre.svg") %>
+    <div class="canette-1">
+      <%= image_tag("SVG/OELP_canette_2.svg") %>
     </div>
   </div>
   <div class="scene-2">
@@ -59,13 +54,22 @@
   </div>
   <div class="scene-4">
     <div class="parasol-3">
-      <%= image_tag("SVG/OELP_umbrella_rose_shadow_1.svg") %>
+      <%= image_tag("SVG/OELP_parasol_rose.svg") %>
+    </div>
+    <div class="ombre-3">
+      <%= image_tag("SVG/OELP_ombre_parasol_3.svg") %>
     </div>
     <div class="bouteille-2">
-      <%= image_tag("SVG/OELP_bouteilles.svg") %>
+      <%= image_tag("SVG/OELP_bouteille_rose.svg") %>
     </div>
     <div class="verre-2">
       <%= image_tag("SVG/OELP_verre.svg") %>
+    </div>
+    <div class="baguette">
+      <%= image_tag("SVG/OELP_baguette.svg") %>
+    </div>
+    <div class="serviette">
+      <%= image_tag("SVG/OELP_serviette_3.svg") %>
     </div>
   </div>
   <div class="mouettes">
@@ -80,12 +84,25 @@
         <%= image_tag("SVG/OELP_ombre_mouette_vol_1.svg") %>
       </div>
     </div>
-    <div class="mouette-3">
-      <div class="mouette-anim animate__animated animate__pulse animate__infinite">
+    <div class="mouette-3" data-onload-target="mouette1">
+      <div class="mouette mouette-anim animate__animated animate__pulse animate__infinite" data-onload-target="mouette2">
         <%= image_tag("SVG/OELP_mouette1.svg") %>
       </div>
-      <div class="ombre mouette-anim animate__animated animate__pulse animate__infinite">
+      <div class="ombre mouette-anim animate__animated animate__pulse animate__infinite" data-onload-target="mouette2">
         <%= image_tag("SVG/OELP_ombre_mouette_vol_2.svg") %>
+      </div>
+    </div>
+    <div class="mouette-3-5" data-onload-target="mouette3">
+      <div class="mouette mouette-anim animate__animated animate__pulse animate__infinite" data-onload-target="mouette4">
+        <%= image_tag("SVG/OELP_mouette2.svg") %>
+      </div>
+      <div class="ombre mouette-anim animate__animated animate__pulse animate__infinite" data-onload-target="mouette4">
+        <%= image_tag("SVG/OELP_ombre_mouette_vol_2.svg") %>
+      </div>
+    </div>
+    <div class="can" data-onload-target="can">
+      <div class="can-img" data-onload-target="canImg">
+        <%= image_tag("SVG/OELP_canette.svg") %>
       </div>
     </div>
     <div class="mouette-4">
@@ -100,10 +117,6 @@
       <%= image_tag("SVG/OELP_mouette_posee_ombre.svg") %>
     </div>
   </div>
-
-  <%# <div class="can-1">
-    <%= image_tag("rose_front_back_small.png") %>
-  <%# </div> %>
   <%# <div class="can-2">
     <%= image_tag("white_front_back_small.png") %>
   <%# </div> %>

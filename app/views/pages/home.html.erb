@@ -1,4 +1,6 @@
-<div class="home-hero" data-controller="scrolled-animations">
+<div class="home-hero" data-controller="scrolled-animations onload">
+  <div class="loader" data-onload-target="loader" data-action="load@document->onload#connect">
+  </div>
   <%= render 'shared/home_top' %>
   <%= render 'shared/home_cans' %>
   <%= render 'shared/home_brand' %>

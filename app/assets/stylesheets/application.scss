@@ -83,4 +83,20 @@ a {
   width: 100%;
   max-width: 100em;
   overflow: hidden;
+
+  .loader {
+    background-color: $blue;
+    position: fixed;
+    top: 0em;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    opacity: 100%;
+
+    &.fade-out {
+      opacity: 0%;
+      transition-property: opacity;
+      transition-duration: 2s;
+    }
+  }
 }

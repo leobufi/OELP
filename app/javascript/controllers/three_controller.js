@@ -49,7 +49,7 @@ export default class extends Controller {
 
     {
       this.color = 0xFFFFFF;
-      this.intensity = 1.5;
+      this.intensity = 1.3;
       this.light = new THREE.AmbientLight(this.color, this.intensity);
       this.scene.add(this.light);
       this.scene.add(this.light.target);
@@ -57,7 +57,7 @@ export default class extends Controller {
 
     {
       this.color = 0xFFFFFF;
-      this.intensity = 1.5;
+      this.intensity = 1.3;
       this.light = new THREE.DirectionalLight(this.color, this.intensity);
       this.light.position.set(-8, 8, 3);
       this.light.target.position.set(-5, -4, -2);
@@ -92,7 +92,7 @@ export default class extends Controller {
 
     {
       this.gltfLoader = new GLTFLoader();
-      this.gltfLoader.load("http://localhost:8080/app/assets/images/3D/25cl_can.gltf", (gltf) => {
+      this.gltfLoader.load("https://res.cloudinary.com/dcnaxhee4/image/upload/v1684909005/25cl_can_yfipvc.gltf", (gltf) => {
         this.model = gltf.scene;
         this.model.traverse((child) => {
           if ( child.isMesh && child.name == "250ml") {
