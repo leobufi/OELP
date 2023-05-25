@@ -4,13 +4,15 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [
     "bubble",
+    "bottle",
     "title",
     "star",
     "mouette",
     "mouette2",
     "word",
     "insta",
-    "canPosition",
+    "bottlePosition",
+    "titlePosition",
     "mouettePosition",
     "mouettePosition2",
     "contactPosition",
@@ -22,22 +24,18 @@ export default class extends Controller {
   }
 
   translate() {
-    let position = this.canPositionTarget.getBoundingClientRect()
+    let position = this.titlePositionTarget.getBoundingClientRect()
     let coordinates = position.y - window.innerHeight;
-    console.log(coordinates, window.innerHeight, position.y)
+    console.log()
     this.titleTargets.forEach (can => {
-      if (coordinates <= 0 ) {
+      if (coordinates <= 0) {
         can.classList.add("translate")
-      } else {
-        can.classList.remove("translate")
       }
     })
 
     this.starTargets.forEach (star => {
       if (coordinates <= 0) {
         star.classList.add("translate")
-      } else {
-        star.classList.remove("translate")
       }
     })
   }
@@ -51,6 +49,19 @@ export default class extends Controller {
         mouette.classList.add("translate")
       } else {
         mouette.classList.remove("translate")
+      }
+    })
+  }
+
+  rotate() {
+    let position = this.bottlePositionTarget.getBoundingClientRect()
+    let coordinates = position.y - window.innerHeight;
+    console.log()
+    this.bottleTargets.forEach (bottle => {
+      if (coordinates <= 0) {
+        bottle.classList.add("translate")
+      } else {
+        bottle.classList.remove("translate")
       }
     })
   }

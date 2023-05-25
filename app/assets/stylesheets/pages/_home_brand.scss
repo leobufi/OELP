@@ -41,16 +41,32 @@
       column-gap: 2em;
       z-index: 100;
 
-      .can-illus {
+      .illus {
+        padding: 0em 4em;
 
         img {
-          width: 20em;
+          width: 4em;
           object-fit: cover;
         }
 
-        &.flipped {
-          transform: scaleX(-1);
+        &.left {
+
+          &.translate {
+            transform: rotate(-180deg);
+            transition-property: transform;
+            transition-duration: 4s;
+          }
         }
+
+        &.right {
+
+          &.translate {
+            transform: rotate(180deg);
+            transition-property: transform;
+            transition-duration: 4s;
+          }
+        }
+
       }
 
       h2 {
@@ -69,6 +85,17 @@
 
     img {
       width: 25em;
+    }
+  }
+
+  .grappe {
+    position: absolute;
+    bottom: 10em;
+    right: 0em;
+    transform: rotate(20deg);
+
+    img {
+      width: 20em;
     }
   }
 

@@ -86,13 +86,26 @@
       left: 7em;
 
       .parasol-1 {
+          z-index: 10;
+          position: absolute;
+          bottom: 0em;
+          left: 10em;
+          transform: rotate(15deg);
+
+          img {
+            width: 17em;
+          }
+        }
+
+      .ombre-1 {
         z-index: 10;
         position: absolute;
-        bottom: -5em;
+        bottom: -7em;
         left: 5em;
+        opacity: 25%;
 
         img {
-          width: 25em;
+          width: 17em;
         }
       }
 
@@ -110,8 +123,8 @@
       .glaciere-2 {
         z-index: 9;
         position: absolute;
-        bottom: -1em;
-        left: 8em;
+        bottom: 1em;
+        left: 10em;
 
         img {
           width: 8em;
