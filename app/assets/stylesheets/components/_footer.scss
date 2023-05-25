@@ -1,0 +1,15 @@
+.footer {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width:100em;
+  color: $green;
+  background-color: $blue;
+
+  p {
+    font-family: $title-font;
+    font-size: 1em;
+    line-height: 0.5em;
+  }
+}
