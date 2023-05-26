@@ -56,12 +56,23 @@
             transition-property: transform;
             transition-duration: 4s;
           }
+
+          &.untranslate {
+            transform: rotate(0deg);
+            transition-property: transform;
+            transition-duration: 4s;
+          }
         }
 
         &.right {
 
           &.translate {
             transform: rotate(180deg);
+            transition-property: transform;
+            transition-duration: 4s;
+          }
+          &.untranslate {
+            transform: rotate(0deg);
             transition-property: transform;
             transition-duration: 4s;
           }
@@ -102,7 +113,7 @@
   .right-side-mouette {
     position: absolute;
     top: 3em;
-    right: 0em;
+    right: -10em;
     z-index: -10;
 
     img {
@@ -111,7 +122,7 @@
     }
 
     &.translate {
-      transform: translate(-100em, 20em);
+      transform: translate(-120em, 20em);
       transition-property: transform;
       transition-duration: 8s;
     }

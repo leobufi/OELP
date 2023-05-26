@@ -37,8 +37,10 @@ export default class extends Controller {
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     // console.log(this.controls);
-    this.controls.maxDistance = 10;
-    this.controls.minDistance = 5;
+    // this.controls.maxDistance = 10;
+    // this.controls.minDistance = 5;
+    this.controls.enableZoom = false;
+    this.controls.enablePan = false;
     this.controls.minPolarAngle = 0.5;
     this.controls.maxPolarAngle = 1.5;
 

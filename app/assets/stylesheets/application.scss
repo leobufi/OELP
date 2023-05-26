@@ -12,6 +12,10 @@
 @import "pages/index";
 @import "font-awesome";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 1vw;
 }

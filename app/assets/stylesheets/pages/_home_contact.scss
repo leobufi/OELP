@@ -22,6 +22,11 @@
         transition-property: transform;
         transition-duration: 2s;
       }
+      &.untranslate {
+        transform: translate(-1em, 1em) rotate(15deg);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
     }
 
     .wanna {
@@ -35,6 +40,11 @@
           transition-property: transform;
           transition-duration: 2s;
         }
+      &.untranslate {
+          transform: translate(5em, 0em) rotate(10deg);
+          transition-property: transform;
+          transition-duration: 2s;
+        }
     }
 
     .order {
@@ -45,6 +55,11 @@
 
       &.translate {
         transform: translate(-8em, 0em) rotate(10deg);
+        transition-property: transform;
+        transition-duration: 2s;
+      }
+      &.untranslate {
+        transform: translate(-2em, 0em) rotate(-10deg);
         transition-property: transform;
         transition-duration: 2s;
       }
@@ -62,19 +77,25 @@
           transition-property: transform;
           transition-duration: 2s;
         }
+
+      &.untranslate {
+          transform: translate(-2em, 8em) rotate(10deg);
+          transition-property: transform;
+          transition-duration: 2s;
+        }
     }
 
     .left-side-mouette {
       position: absolute;
       top: 3em;
-      left: 0em;
+      left: -10em;
 
       img {
         width: 17em;
       }
 
       &.translate {
-        transform: translate(100em, 20em);
+        transform: translate(110em, 20em);
         transition-property: transform;
         transition-duration: 8s;
       }
@@ -131,10 +152,10 @@
         }
       }
 
-      .verre-3 {
+      .canette {
         z-index: 9;
         position: absolute;
-        bottom: -5em;
+        bottom: -3em;
         left: 10em;
 
         img {
