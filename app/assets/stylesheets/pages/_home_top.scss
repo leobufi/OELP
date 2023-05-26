@@ -86,12 +86,24 @@
       .canette-1 {
         z-index: 9;
         position: absolute;
-        bottom: -3em;
-        left: 10em;
+        bottom: -5em;
+        left: 3em;
         transform: rotate(-40deg);
 
         img {
           width: 4em;
+        }
+      }
+
+      .perso {
+        z-index: 9;
+        position: absolute;
+        bottom: -7em;
+        left: 1em;
+        transform: rotate(22deg);
+
+        img {
+          width: 14em;
         }
       }
     }
@@ -112,27 +124,6 @@
         }
       }
 
-      .bouteille-1 {
-        z-index: 9;
-        position: absolute;
-        bottom: -3em;
-        left: 35em;
-
-        img {
-          width: 6em;
-        }
-      }
-
-      .verre-1 {
-        z-index: 9;
-        position: absolute;
-        bottom: -5em;
-        left: 33em;
-
-        img {
-          width: 4em;
-        }
-      }
     }
 
     .scene-3 {
@@ -228,29 +219,6 @@
         }
       }
 
-      .bouteille-2 {
-        z-index: 9;
-        position: absolute;
-        bottom: -15em;
-        right: 22em;
-
-        img {
-          width: 1.5em;
-        }
-      }
-
-      .verre-2 {
-        z-index: 9;
-        position: absolute;
-        bottom: -19em;
-        right: 22em;
-
-        img {
-          width: 6em;
-          transform: scaleX(-1);
-        }
-      }
-
       .baguette {
         z-index: 9;
         position: absolute;
@@ -280,16 +248,6 @@
 
     .mouettes {
 
-      .mouette-1 {
-        z-index: 9;
-        position: absolute;
-        bottom: 0em;
-        right: 30em;
-
-        img {
-          width: 5em;
-        }
-      }
 
       .mouette-2 {
         z-index: 9;
@@ -318,21 +276,16 @@
       .mouette-3 {
         z-index: 9;
         position: absolute;
-        top: 12em;
+        top: 0em;
         left: -20em;
         animation-duration: 12s;
 
         .mouette {
 
           img {
-            width: 18em;
+            width: 10em;
           }
 
-          &.disappear {
-            opacity: 0%;
-            transition: opacity;
-            transition-delay: 4s;
-          }
         }
 
         .ombre {
@@ -346,101 +299,24 @@
             opacity: 25%;
           }
 
-          &.disappear {
-            opacity: 0%;
-            transition: opacity;
-            transition-delay: 4s;
-          }
         }
 
         &.fly {
-          transform: translate(60em, 0em);
+          transform: translate(140em, 20em);
           transition-property: transform;
-          transition-duration: 4s;
+          transition-duration: 8s;
 
-        }
-      }
+          .mouette {
 
-      .mouette-3-5 {
-        z-index: 9;
-        position: absolute;
-        top: 12em;
-        left: 40em;
-        animation-duration: 12s;
-
-        .mouette {
-          opacity: 0%;
-
-          img {
-            width: 18em;
-          }
-
-          &.appear {
-            opacity: 100%;
-            transition: opacity;
-            transition-delay: 4s;
-          }
-        }
-
-        .ombre {
-          z-index: 9;
-          position: absolute;
-          top: 30em;
-          right: 16em;
-          opacity: 0%;
-
-          img {
-            width: 18em;
-            opacity: 25%;
-          }
-
-          &.appear {
-            opacity: 100%;
-            transition: opacity;
-            transition-delay: 4s;
-          }
-        }
-
-        &.fly {
-          transform: translate(70em, 0em);
-          transition-property: transform;
-          transition-duration: 4s;
-          transition-delay: 4s;
-        }
-      }
-
-      .can {
-        z-index: 100000000;
-        position: absolute;
-        top: 16.3em;
-        left: 49em;
-        transform: rotate(3deg);
-
-        .can-img {
-          opacity: 0%;
-
-          img {
-            width: 6.5em;
-          }
-
-          &.appear {
-            opacity: 100%;
-            transition: opacity;
-            transition-delay: 4s;
-          }
-        }
-
-
-        &.fall {
-          transform: translate(0em, 40em) rotate(1920deg);
-          transition-property: transform;
-          transition-duration: 4s;
-          transition-delay: 4s;
+              img {
+                width: 18em;
+              }
+            }
         }
       }
 
       .mouette-4 {
-        z-index: 9;
+        z-index: -10;
         position: absolute;
         top: 6em;
         left: 6em;
@@ -460,7 +336,6 @@
 
         img {
           width: 5em;
-          transform: scaleX(-1);
         }
       }
 

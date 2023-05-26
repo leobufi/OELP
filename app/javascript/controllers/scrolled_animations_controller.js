@@ -3,111 +3,84 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="scrolled-animations"
 export default class extends Controller {
   static targets = [
+    "target",
     "bubble",
-    "bottle",
-    "title",
-    "star",
-    "mouette",
-    "mouette2",
-    "word",
-    "insta",
-    "bottlePosition",
-    "titlePosition",
-    "mouettePosition",
-    "mouettePosition2",
-    "contactPosition",
-    "instaPosition"
   ]
 
   connect() {
     console.log("Connected to Scrolled Animations")
+    this.observer = new IntersectionObserver(
+      this.handleIntersection.bind(this),
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    this.targetTargets.forEach((target) => this.observer.observe(target));
   }
 
-  translate() {
-    let position = this.titlePositionTarget.getBoundingClientRect()
-    let coordinates = position.y - window.innerHeight;
-    console.log()
-    this.titleTargets.forEach (can => {
-      if (coordinates <= 0) {
-        can.classList.add("translate")
-      }
-    })
+  translate(entry) {
+    const target = entry.target;
 
-    this.starTargets.forEach (star => {
-      if (coordinates <= 0) {
-        star.classList.add("translate")
-      }
-    })
+    if (entry.isIntersecting) {
+      // console.log("Cible visible :", target);
+      target.classList.remove("untranslate")
+      target.classList.add("translate");
+    } else {
+      // console.log("Cible invisible :", target);
+      target.classList.remove("translate");
+      target.classList.add("untranslate")
+    }
   }
 
-  translateX() {
-    let position = this.mouettePositionTarget.getBoundingClientRect()
-    let coordinates = position.y - window.innerHeight;
-    console.log()
-    this.mouetteTargets.forEach (mouette => {
-      if (coordinates <= 0) {
-        mouette.classList.add("translate")
-      } else {
-        mouette.classList.remove("translate")
-      }
-    })
-  }
-
-  rotate() {
-    let position = this.bottlePositionTarget.getBoundingClientRect()
-    let coordinates = position.y - window.innerHeight;
-    console.log()
-    this.bottleTargets.forEach (bottle => {
-      if (coordinates <= 0) {
-        bottle.classList.add("translate")
-      } else {
-        bottle.classList.remove("translate")
-      }
-    })
-  }
-
-  translateX2() {
-    let position = this.mouettePosition2Target.getBoundingClientRect()
-    let coordinates = position.y - window.innerHeight;
-    console.log()
-    this.mouette2Targets.forEach (mouette => {
-      if (coordinates <= 0) {
-        mouette.classList.add("translate")
-      } else {
-        mouette.classList.remove("translate")
-      }
-    })
-  }
-
-  fontGrow() {
-    let position = this.contactPositionTarget.getBoundingClientRect()
-    let coordinatesTop = position.y - window.innerHeight;
-    let coordinatesBottom = position.y;
-    console.log()
-    this.wordTargets.forEach (word => {
-      if (coordinatesTop <= 0) {
-        word.classList.add("translate")
-      } else {
-          word.classList.remove("translate")
-      }
-    })
-  }
-
-  instaGrow() {
-    let position = this.instaPositionTarget.getBoundingClientRect()
-    let coordinatesTop = position.y - window.innerHeight;
-    this.instaTargets.forEach (insta => {
-      if (coordinatesTop <= 0) {
-        insta.classList.add("translate")
-      } else {
-          insta.classList.remove("translate")
-      }
-    })
+  handleIntersection(entries) {
+    entries.forEach((entry) => {
+      this.translate(entry);
+    });
   }
 
   hoverBtn() {
     this.bubbleTargets.forEach (bubble => {
-        bubble.classList.toggle("active")
+      bubble.classList.toggle("active")
     })
   }
 }
+
+// >> Se déclenche lorsque la position du déclencheur est
+//      en dessous de la position supérieure de l'écran
+
+// translate() {
+//   let position = this.declencheurPositionTarget.getBoundingClientRect()
+//   let coordinatesTop = position.y - window.innerHeight;
+//   this.targetTargets.forEach (target => {
+//     if (coordinatesTop <= 0) {
+//       target.classList.add("translate")
+//     } else {
+//         target.classList.remove("translate")
+//     }
+//   })
+// }
+
+// >> Déclenche uen classe lorsque scroll vers le bas ou le haut
+//
+// à appeler dans connect >> this.lastScrollPosition = window.pageYOffset;
+
+// translate() {
+
+//     const currentScrollPosition = window.pageYOffset;
+
+//       if (currentScrollPosition > this.lastScrollPosition) {
+//         this.targetTargets.forEach (target => {
+//           target.classList.remove("untranslate")
+//           target.classList.add("translate")
+//         })
+//       } else if (currentScrollPosition < this.lastScrollPosition) {
+//         this.targetTargets.forEach (target => {
+//           target.classList.remove("translate")
+//           target.classList.add("untranslate")
+//         })
+//       }
+
+//     this.lastScrollPosition = currentScrollPosition;
+
+// }

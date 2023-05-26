@@ -1,19 +1,19 @@
-<div class="home-section instagram" data-scrolled-animations-target="instaPosition" data-action="scroll@window->scrolled-animations#instaGrow">
+<div class="home-section instagram" data-action="scroll@window->scrolled-animations#translate">
   <div class="page-padding insta">
     <%# <div class="raisin">
       <%= image_tag("SVG/OELP_raisin_rose.svg") %>
     <%# </div> %>
     <% @instagrams.each do |insta| %>
-      <div class="top-left" data-scrolled-animations-target="insta">
+      <div class="top-left" data-scrolled-animations-target="target">
         <%= cl_image_tag insta.top_left_photo.key %>
       </div>
-      <div class="top-right" data-scrolled-animations-target="insta">
+      <div class="top-right" data-scrolled-animations-target="target">
         <%= cl_image_tag insta.top_right_photo.key %>
       </div>
-      <div class="bottom-left" data-scrolled-animations-target="insta">
+      <div class="bottom-left" data-scrolled-animations-target="target">
         <%= cl_image_tag insta.bottom_left_photo.key %>
       </div>
-      <div class="bottom-right" data-scrolled-animations-target="insta">
+      <div class="bottom-right" data-scrolled-animations-target="target">
         <%= cl_image_tag insta.bottom_right_photo.key %>
       </div>
     <div class="insta-title-link">

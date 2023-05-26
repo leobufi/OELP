@@ -1,8 +1,8 @@
-<div class="home-section mid-h brand" data-action="scroll@window->scrolled-animations#translateX">
+<div class="home-section mid-h brand" data-action="scroll@window->scrolled-animations#translate">
   <div class="left-side-umbrella">
     <%= image_tag("SVG/OELP_parasol_vert.svg") %>
   </div>
-  <div class="right-side-mouette" data-scrolled-animations-target="mouette">
+  <div class="right-side-mouette" data-scrolled-animations-target="target">
     <%= image_tag("SVG/OELP_mouette1.svg") %>
   </div>
   <div class="grappe">
@@ -14,7 +14,7 @@
         <p><%= b.baseline %></p>
       <% end %>
     </div>
-    <div class="brand-infos" data-action="scroll@window->scrolled-animations#translateX">
+    <div class="brand-infos">
       <% @brand_infos.where(side: "Left").each do |b| %>
         <div class="infos left">
           <h2><%= b.title %></h2>
@@ -28,15 +28,15 @@
         </div>
       <% end %>
     </div>
-    <div class="cheers" data-action="scroll@window->scrolled-animations#rotate">
-      <div class="illus left" data-scrolled-animations-target="bottle">
+    <div class="cheers">
+      <div class="illus left" data-scrolled-animations-target="target">
         <%= image_tag("SVG/OELP_bouteille_rose.svg") %>
       </div>
-      <div class="text" data-scrolled-animations-target="bottlePosition">
+      <div class="text">
         <h2>Tchin tchin !</h2>
         <h2>Cheers !</h2>
       </div>
-      <div class="illus right" data-scrolled-animations-target="bottle">
+      <div class="illus right" data-scrolled-animations-target="target">
         <%= image_tag("SVG/OELP_bouteille_blanc.svg") %>
       </div>
     </div>

@@ -20,12 +20,24 @@
         }
 
         &.translate {
-          transform: translate(2em, -7em) rotate(360deg);
+          transform: translate(2em, -7em);
           transition-property: transform;
           transition-duration: 2s;
 
           img {
             width: 24em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
+        }
+
+        &.untranslate {
+          transform: translate(-2em, 7em);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 20em;
             transition-property: width;
             transition-duration: 2s;
           }
@@ -46,12 +58,23 @@
         }
 
         &.translate {
-          transform: translate(5em, -3em) rotate(345deg);
+          transform: translate(5em, -3em);
           transition-property: transform;
           transition-duration: 2s;
 
           img {
             width: 24em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
+        }
+        &.untranslate {
+          transform: translate(-2em, 3em);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 20em;
             transition-property: width;
             transition-duration: 2s;
           }
@@ -72,12 +95,24 @@
         }
 
         &.translate {
-          transform: translate(-3em, -5em) rotate(345deg);
+          transform: translate(-3em, -5em);
           transition-property: transform;
           transition-duration: 2s;
 
           img {
               width: 24em;
+              transition-property: width;
+              transition-duration: 2s;
+            }
+        }
+
+        &.untranslate {
+          transform: translate(3em, 5em);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+              width: 20em;
               transition-property: width;
               transition-duration: 2s;
             }
@@ -98,7 +133,18 @@
         }
 
         &.translate {
-          transform: translate(2em, -1em) rotate(345deg);
+          transform: translate(2em, -1em);
+          transition-property: transform;
+          transition-duration: 2s;
+
+          img {
+            width: 20em;
+            transition-property: width;
+            transition-duration: 2s;
+          }
+        }
+        &.untranslate {
+          transform: translate(-2em, 1em);
           transition-property: transform;
           transition-duration: 2s;
 
