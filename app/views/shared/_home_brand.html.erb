@@ -5,24 +5,24 @@
   <div class="right-side-mouette" data-scrolled-animations-target="target">
     <%= image_tag("SVG/OELP_mouette1.svg") %>
   </div>
-  <div class="grappe">
+  <div class="grappe" data-scrolled-animations-target="target">
     <%= image_tag("SVG/OELP_raisin_rose.svg") %>
   </div>
   <div class="page-padding brand">
-    <div class="baseline" data-scrolled-animations-target="mouettePosition">
+    <div class="baseline" data-scrolled-animations-target="target">
       <% @baselines.each do |b| %>
         <p><%= b.baseline %></p>
       <% end %>
     </div>
     <div class="brand-infos">
       <% @brand_infos.where(side: "Left").each do |b| %>
-        <div class="infos left">
+        <div class="infos left animate__animated" data-scrolled-animations-target="target">
           <h2><%= b.title %></h2>
           <p><%= b.content %></p>
         </div>
       <% end %>
       <% @brand_infos.where(side: "Right").each do |b| %>
-        <div class="infos">
+        <div class="infos" data-scrolled-animations-target="target">
           <h2><%= b.title %></h2>
           <p><%= b.content %></p>
         </div>
@@ -32,7 +32,7 @@
       <div class="illus left" data-scrolled-animations-target="target">
         <%= image_tag("SVG/OELP_bouteille_rose.svg") %>
       </div>
-      <div class="text">
+      <div class="text" data-scrolled-animations-target="target">
         <h2>Tchin tchin !</h2>
         <h2>Cheers !</h2>
       </div>

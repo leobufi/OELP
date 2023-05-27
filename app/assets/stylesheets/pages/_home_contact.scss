@@ -11,24 +11,6 @@
       font-size: 7em;
     }
 
-    .you {
-      position: absolute;
-      top: 8em;
-      left: 25em;
-      transform: rotate(-20deg);
-
-      &.translate {
-        transform: translate(-5em, -2em) rotate(-15deg);
-        transition-property: transform;
-        transition-duration: 2s;
-      }
-      &.untranslate {
-        transform: translate(-1em, 1em) rotate(15deg);
-        transition-property: transform;
-        transition-duration: 2s;
-      }
-    }
-
     .wanna {
       position: absolute;
       top: 7em;
@@ -36,7 +18,7 @@
       transform: rotate(30deg);
 
       &.translate {
-          transform: translate(9em, -3em) rotate(-10deg);
+          transform: translate(-23em, -2em) rotate(-10deg);
           transition-property: transform;
           transition-duration: 2s;
         }
@@ -95,7 +77,7 @@
       }
 
       &.translate {
-        transform: translate(110em, 20em);
+        transform: translate(110em, 20em) scale(1.75) perspective(25em);
         transition-property: transform;
         transition-duration: 8s;
       }

@@ -10,6 +10,19 @@
       display: flex;
       justify-content: center;
       text-align: center;
+      padding: 0em 12em;
+
+      &.translate {
+          transform: translateY(-1.5em);
+          transition-property: transform;
+          transition-duration: 1s;
+        }
+
+      &.untranslate {
+          transform: translateY(1.5em);
+          transition-property: transform;
+          transition-duration: 1s;
+        }
     }
 
     .brand-infos {
@@ -24,8 +37,20 @@
         justify-content: center;
         text-align: center;
 
+        &.translate {
+          transform: translateY(-1.5em);
+          transition-property: transform;
+          transition-duration: 1s;
+        }
+        &.untranslate {
+          transform: translateY(1.5em);
+          transition-property: transform;
+          transition-duration: 1s;
+        }
+
         &.left {
           z-index: -100;
+
         }
 
         .trix-content {
@@ -41,6 +66,13 @@
       column-gap: 2em;
       z-index: 100;
 
+      .text {
+        &.translate {
+            animation: wobble;
+            animation-duration: 3s;
+          }
+      }
+
       .illus {
         padding: 0em 4em;
 
@@ -52,13 +84,13 @@
         &.left {
 
           &.translate {
-            transform: rotate(-180deg);
+            transform: rotate(6.6turn) scale(1.5);
             transition-property: transform;
             transition-duration: 4s;
           }
 
           &.untranslate {
-            transform: rotate(0deg);
+            transform: rotate(-6.6turn) scale(1);
             transition-property: transform;
             transition-duration: 4s;
           }
@@ -67,12 +99,12 @@
         &.right {
 
           &.translate {
-            transform: rotate(180deg);
+            transform: rotate(6.4turn) scale(1.5);
             transition-property: transform;
             transition-duration: 4s;
           }
           &.untranslate {
-            transform: rotate(0deg);
+            transform: rotate(-6.4turn) scale(1);
             transition-property: transform;
             transition-duration: 4s;
           }
@@ -103,10 +135,14 @@
     position: absolute;
     bottom: 10em;
     right: 0em;
-    transform: rotate(20deg);
 
     img {
       width: 20em;
+    }
+
+    &.translate {
+      animation: pulse;
+      animation-duration: 2s;
     }
   }
 
@@ -122,7 +158,7 @@
     }
 
     &.translate {
-      transform: translate(-120em, 20em);
+      transform: translate(-120em, 20em) scale(1.75) perspective(25em);
       transition-property: transform;
       transition-duration: 8s;
     }
