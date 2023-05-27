@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    row-gap: 4em;
+    row-gap: 2em;
     align-items: center;
     padding: 20em 4em 8em 4em;
 
@@ -18,18 +18,20 @@
       h1 {
         font-size: 6.5em;
         line-height: 1.5em;
+        // -webkit-text-stroke: 1px $rose;
+        text-shadow: $rose 0.05em 0.05em;
       }
 
       &.translate {
         transform: translateY(-5em);
         transition-property: transform;
-        transition-duration: 3s;
+        transition-duration: 2s;
       }
 
       &.untranslate {
         transform: translateY(0em);
         transition-property: transform;
-        transition-duration: 3s;
+        transition-duration: 2s;
       }
 
     }
@@ -46,7 +48,7 @@
         }
 
         &.translate {
-          transform: translate(-3em, -6em);
+          transform: translate(-5em, -12em);
           transition-property: transform;
           transition-duration: 3s;
 
@@ -80,7 +82,7 @@
         }
 
         &.translate {
-          transform: translate(-6em, -3em);
+          transform: translate(-14em, 3em);
           transition-property: transform;
           transition-duration: 3s;
 
@@ -113,7 +115,7 @@
 
       .canva {
         min-width: 25em;
-        height: 40em;
+        height: 50em;
         // border-radius: 50px;
         // border: solid 3px $black;
         position: relative;

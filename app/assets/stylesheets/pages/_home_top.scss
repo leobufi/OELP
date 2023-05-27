@@ -8,6 +8,7 @@
     .logo-wrapper {
       animation: zoomInDown;
       animation-duration: 3s;
+      animation-delay: 2s;
       padding-top: 2em;
 
       .logo {
@@ -255,6 +256,9 @@
         top: 10em;
         right: 20em;
         animation-duration: 12s;
+        animation: zoomIn;
+        animation-duration: 4s;
+        animation-delay: 2s;
 
         img {
           width: 18em;
@@ -302,7 +306,7 @@
         }
 
         &.fly {
-          transform: translate(140em, 20em);
+          transform: translate(140em, 20em) scale(1.75) perspective(25em);
           transition-property: transform;
           transition-duration: 8s;
 
@@ -321,6 +325,9 @@
         top: 6em;
         left: 6em;
         animation-duration: 12s;
+        animation: zoomIn;
+        animation-duration: 2s;
+        animation-delay: 2.5s;
 
         img {
           width: 8em;

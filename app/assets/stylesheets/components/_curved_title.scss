@@ -11,30 +11,72 @@
 
     .O {
       transform: translate(20px, 85px) rotate(-30deg);
+
+      &.translate {
+        animation: heartBeat;
+        animation-duration: 1s;
+        animation-delay: 0s;
+      }
     }
 
     .r {
       transform: translate(13px, 60px) rotate(-25deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.2s;
+        }
     }
 
     .g {
       transform: translate(6px, 40px) rotate(-20deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.4s;
+        }
     }
 
     .a {
       transform: translate(3px, 23px) rotate(-15deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.6s;
+        }
     }
 
     .n {
       transform: translate(2px, 12px) rotate(-7deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.8s;
+        }
     }
 
     .i {
       transform: translate(1px, 8px) rotate(-5deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 1;
+        }
     }
 
     .c {
       transform: translate(0px, 5px) rotate(0deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 1.2s;
+        }
     }
 
     .space {
@@ -44,31 +86,72 @@
 
     .f {
       transform: translate(-1px, 8px) rotate(5deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 1s;
+        }
     }
 
     .r2 {
       transform: translate(-2px, 14px) rotate(10deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.8s;
+        }
     }
 
     .e {
       transform: translate(-12px, 23px) rotate(24deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.6s;
+     }
     }
 
     .n2 {
       transform: translate(-12px, 40px) rotate(20deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.4s;
+        }
     }
 
     .c2 {
       transform: translate(-17px, 64px) rotate(25deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0.2s;
+        }
     }
     .h {
       transform: translate(-27px, 94px) rotate(30deg);
+
+      &.translate {
+          animation: heartBeat;
+          animation-duration: 1s;
+          animation-delay: 0s;
+        }
     }
   }
 
   .line2 {
     display: flex;
     column-gap: 0.5em;
+
+    // &.translate {
+    //     animation: zoomIn;
+    //     animation-duration: 1s;
+    //   }
 
     .space {
       width: 0.5em;
