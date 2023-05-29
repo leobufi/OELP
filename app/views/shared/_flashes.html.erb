@@ -1,0 +1,14 @@
+<div class="flashes" data-controller="flashes">
+  <% if flash[:notice] %>
+    <div class="notice" data-flashes-target="flash">
+      <%= flash[:notice] %>
+      <button data-action="click->flashes#close">close</button>
+    </div>
+  <% end %>
+  <% if flash[:error] %>
+    <div class="notice" data-flashes-target="flash">
+      <%= flash[:notice] %>
+      <button data-action="click->flashes#close">close</button>
+    </div>
+  <% end %>
+</div>

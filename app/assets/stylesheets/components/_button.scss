@@ -21,15 +21,14 @@ button {
       position: relative;
       z-index: 1000;
 
+      a {
+        font-size: 1em;
+      }
+
       &:hover {
         transform: translate(-5px, 5px);
         transition-property: transform;
         transition-duration: 1s;
-
-        a {
-          color: $green;
-        }
-
       }
     }
 

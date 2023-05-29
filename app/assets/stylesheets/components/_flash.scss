@@ -1,0 +1,15 @@
+.notice {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+  border: 1px solid $black;
+  border-radius: 25px;
+  background-color: $green;
+  font-size: 1.5em;
+  padding: 1em 2em;
+}

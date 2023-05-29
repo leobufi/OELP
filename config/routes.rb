@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   resources :baselines, only: [:new, :create, :edit, :update, :destroy]
   resources :photos, only: [:new, :create, :edit, :update, :destroy]
   resources :instagrams, only: [:new, :create, :edit, :update, :destroy]
+  resources :contacts, only: [:new, :create]
+
 end

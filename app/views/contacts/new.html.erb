@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="page-padding">
+    <div class="page-title">
+      <h1>Contact us</h1>
+    </div>
+    <div class="form">
+      <%= simple_form_for(@contact) do |f| %>
+        <%= f.input :name, placeholder: "Your name & first name", label: false %>
+        <%= f.input :email, placeholder: "Your email", label: false %>
+        <%= f.input :message, placeholder: "Your message", label: false, :as => :text, :input_html => { :rows => 7 , :style => 'width: 100%'} %>
+        <div class= "d-none">
+          <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+        </div>
+        <div class="form-button">
+          <button>
+            <%= f.button :submit, 'Send' %>
+          </button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<%= render 'shared/footer' %>
+</div>

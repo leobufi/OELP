@@ -53,6 +53,7 @@ gem 'devise'
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "font-awesome-sass", "~> 6.1"
+gem "mail_form"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
