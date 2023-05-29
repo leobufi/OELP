@@ -88,8 +88,8 @@ export default class extends Controller {
 
     {
       // RATIO FOR CAN SCALLING \\
-      this.canX = (window.innerWidth / window.innerHeight) * 30;
-      this.canY = (window.innerWidth / window.innerHeight) * 35;
+      this.canX = (window.innerWidth / window.innerHeight) * 28;
+      this.canY = (window.innerWidth / window.innerHeight) * 33;
     }
 
     {

@@ -84,13 +84,13 @@
         &.left {
 
           &.translate {
-            transform: rotate(6.6turn) scale(1.5);
+            transform: rotate(2.6turn) scale(1.5);
             transition-property: transform;
             transition-duration: 4s;
           }
 
           &.untranslate {
-            transform: rotate(-6.6turn) scale(1);
+            transform: rotate(-2.6turn) scale(1);
             transition-property: transform;
             transition-duration: 4s;
           }
@@ -99,12 +99,12 @@
         &.right {
 
           &.translate {
-            transform: rotate(6.4turn) scale(1.5);
+            transform: rotate(2.4turn) scale(1.5);
             transition-property: transform;
             transition-duration: 4s;
           }
           &.untranslate {
-            transform: rotate(-6.4turn) scale(1);
+            transform: rotate(-2.4turn) scale(1);
             transition-property: transform;
             transition-duration: 4s;
           }
