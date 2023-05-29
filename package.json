@@ -2,6 +2,7 @@
   "dependencies": {
     "@rails/actiontext": "^7.0.5",
     "bootstrap": "^5.2.3",
+    "howler": "^2.2.3",
     "servez": "^1.14.2",
     "trix": "^2.0.5"
   }

@@ -1,5 +1,13 @@
-<div class="home-hero" data-controller="scrolled-animations onload">
+<div class="home-hero" data-controller="scrolled-animations onload howler">
   <div class="loader" data-onload-target="loader" data-action="load@document->onload#connect">
+  </div>
+  <div class="player">
+    <div class="play-btn" data-howler-target="playBtn" data-action="click->howler#play">
+      <div><i class="fa-solid fa-play"></i></div>
+    </div>
+    <div class="pause-btn" data-howler-target="pauseBtn" data-action="click->howler#pause">
+      <div><i class="fa-solid fa-pause"></i></div>
+    </div>
   </div>
   <%= render 'shared/home_top' %>
   <%= render 'shared/home_cans' %>

@@ -1,0 +1,34 @@
+.player {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  z-index: 1000000;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  background-color: $green;
+  border: solid 2px $black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $rose;
+    box-shadow: -0.2em 0.2em $dark-blue;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    // transform: translate(0.2em, -0.2em);
+    // transition-property: transform;
+    // transition-duration: 1s;
+  }
+
+  .pause-btn {
+    display: none;
+
+    &.bump {
+      animation: bounceIn;
+      animation-duration: 0.5s;
+    }
+  }
+}
