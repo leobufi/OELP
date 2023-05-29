@@ -15,7 +15,7 @@ export default class extends Controller {
     setTimeout(() => {
       this.loaderTarget.classList.remove("loader");
       this.loaderTarget.classList.remove("fade-out");
-    }, 2000);
+    }, 3000);
   }
 
   loader() {
