@@ -23,12 +23,11 @@ export default class extends Controller {
         this.playBtnTarget.style.display = 'none';
       },
       onplay: () => {
-        this.playBtnTarget.style.display = 'none';
-        this.pauseBtnTarget.style.display = 'block';
-        this.pauseBtnTarget.classList.add = 'bump';
+        this.playBtnTarget.classList.remove = 'none';
+        this.pauseBtnTarget.style.display = 'flex';
       },
       onpause: () => {
-        this.playBtnTarget.style.display = 'block';
+        this.playBtnTarget.style.display = 'flex';
         this.pauseBtnTarget.style.display = 'none';
       },
     });

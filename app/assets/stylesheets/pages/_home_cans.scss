@@ -19,7 +19,7 @@
         font-size: 6.5em;
         line-height: 1.5em;
         // -webkit-text-stroke: 1px $rose;
-        text-shadow: $green 0.05em 0.05em;
+        text-shadow: $rose 0.05em 0.05em;
       }
 
       &.translate {
@@ -156,9 +156,9 @@
 
             .bubble {
               position: absolute;
-              bottom: -10em;
+              bottom: -5em;
               left: 5em;
-              width: 16em;
+              width: 20em;
               display: flex;
               flex-direction: column;
               justify-content: flex-start;
@@ -173,28 +173,28 @@
         }
       }
 
-      .cans-perso {
+      .cans-grape {
         position: absolute;
-        top: -20em;
-        right: 0em;
+        top: -21em;
+        right: -2em;
         transform: scaleX(-1);
         // transform: rotate(20deg);
 
         img {
-          width: 18em;
+          width: 23em;
         }
       }
 
-      .cans-serviette {
-        position: absolute;
-        top: -17em;
-        right: -1em;
-        z-index: -1;
+      // .cans-serviette {
+      //   position: absolute;
+      //   top: -17em;
+      //   right: -1em;
+      //   z-index: -1;
 
-        img {
-          width: 18em;
-        }
-      }
+      //   img {
+      //     width: 18em;
+      //   }
+      // }
 
       .cans-glaciere {
         position: absolute;

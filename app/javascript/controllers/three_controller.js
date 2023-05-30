@@ -51,7 +51,7 @@ export default class extends Controller {
 
     {
       this.color = 0xFFFFFF;
-      this.intensity = 1.3;
+      this.intensity = 1;
       this.light = new THREE.AmbientLight(this.color, this.intensity);
       this.scene.add(this.light);
       this.scene.add(this.light.target);
@@ -59,10 +59,20 @@ export default class extends Controller {
 
     {
       this.color = 0xFFFFFF;
-      this.intensity = 1.3;
+      this.intensity = 1;
       this.light = new THREE.DirectionalLight(this.color, this.intensity);
       this.light.position.set(-8, 8, 3);
       this.light.target.position.set(-5, -4, -2);
+      this.scene.add(this.light);
+      this.scene.add(this.light.target);
+    }
+
+    {
+      this.color = 0xFFFFFF;
+      this.intensity = 1;
+      this.light = new THREE.DirectionalLight(this.color, this.intensity);
+      this.light.position.set(8, 8, 3);
+      this.light.target.position.set(5, -4, -2);
       this.scene.add(this.light);
       this.scene.add(this.light.target);
     }
