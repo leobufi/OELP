@@ -157,8 +157,8 @@
       .ombre-parasol-2 {
         z-index: 10;
         position: absolute;
-        bottom: -18em;
-        right: 46em;
+        bottom: -19em;
+        right: 45em;
         opacity: 25%;
         transform: rotate(-35deg);
 
@@ -172,7 +172,7 @@
         z-index: 9;
         position: absolute;
         bottom: -19em;
-        right: 43em;
+        right: 46em;
 
         img {
           width: 15em;
@@ -194,7 +194,8 @@
         z-index: 9;
         position: absolute;
         bottom: -17em;
-        right: 42em;
+        right: 45em;
+        transform: scaleX(-1);
 
         img {
           width: 15em;
