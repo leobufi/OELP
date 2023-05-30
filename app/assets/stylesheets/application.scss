@@ -80,7 +80,9 @@ a {
 }
 
 .container {
+  overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
 
 .page-padding {

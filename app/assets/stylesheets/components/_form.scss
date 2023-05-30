@@ -59,3 +59,56 @@ trix-editor {
   border: solid 1px $black;
   border-radius: 25px;
 }
+
+.parasol {
+  position: absolute;
+  top: 10em;
+  right: 3em;
+
+  img {
+    width: 6em;
+  }
+}
+
+.form-raisin {
+  position: absolute;
+  top: -3em;
+  left: -4em;
+
+  img {
+    width: 15em;
+  }
+}
+
+.form-raisin2 {
+  position: absolute;
+  top: -3em;
+  right: -4em;
+  transform: scaleX(-1);
+
+  img {
+    width: 15em;
+  }
+}
+
+.form-glaciere {
+  position: absolute;
+  top: 45em;
+  left: 0em;
+  transform: rotate(30deg);
+
+  img {
+    width: 10em;
+  }
+}
+
+.form-glaciere2 {
+  position: absolute;
+  top: 45em;
+  right: 0em;
+  transform: rotate(-30deg) scaleX(-1);
+
+  img {
+    width: 10em;
+  }
+}
