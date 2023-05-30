@@ -11,6 +11,6 @@ test:
 
 production:
   adapter: postgresql
-  database: my_database_production
+  database: postgres://czcguygheqmkod:d8e1869b227b7fedc1e841f8361bb4621c2dbceca4dab2dcd993eac6f5cdc69c@ec2-52-17-31-244.eu-west-1.compute.amazonaws.com:5432/dehkcdg1qkq0maduction
   pool: 5
   timeout: 5000
