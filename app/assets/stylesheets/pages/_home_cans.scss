@@ -19,7 +19,7 @@
         font-size: 6.5em;
         line-height: 1.5em;
         // -webkit-text-stroke: 1px $rose;
-        text-shadow: $rose 0.05em 0.05em;
+        text-shadow: $green 0.05em 0.05em;
       }
 
       &.translate {
@@ -48,7 +48,7 @@
         }
 
         &.translate {
-          transform: translate(-5em, -12em);
+          transform: translate(-14em, -11em);
           transition-property: transform;
           transition-duration: 3s;
 

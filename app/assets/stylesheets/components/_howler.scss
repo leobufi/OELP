@@ -4,11 +4,11 @@
   right: 2em;
   z-index: 1000000;
   cursor: pointer;
-  width: 3em;
-  height: 3em;
+  width: 5em;
+  height: 5em;
   background-color: $green;
-  border: solid 2px $black;
-  border-radius: 25px;
+  border: solid 1px $black;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,10 @@
   &:hover {
     background-color: $rose;
     box-shadow: -0.2em 0.2em $dark-blue;
+    box-shadow: -0.4em 0.4em $yellow;
+    box-shadow: -0.6em 0.6em $green;
     transition-property: box-shadow;
     transition-duration: 0.5s;
-    // transform: translate(0.2em, -0.2em);
-    // transition-property: transform;
-    // transition-duration: 1s;
   }
 
   .pause-btn {

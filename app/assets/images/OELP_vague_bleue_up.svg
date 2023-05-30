@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2376 144"><defs><style>.cls-1{fill:#9cbcff;}</style></defs><title>OELP_vague_Fichier 1</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M0,.67S144,72,288,72,576,0,720,0s288,72,432,72S1440,0,1584,0s288,72,432,72S2232,0,2376,0V144H0Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2376 144" style="enable-background:new 0 0 2376 144;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4A97F4;}
+</style>
+<title>OELP_vague_Fichier 1</title>
+<g>
+	<g id="Calque_1-2">
+		<path class="st0" d="M0,0.7C0,0.7,144,72,288,72S576,0,720,0s288,72,432,72s288-72,432-72s288,72,432,72s216-72,360-72v144H0V0.7z
+			"/>
+	</g>
+</g>
+</svg>
