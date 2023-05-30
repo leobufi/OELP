@@ -14,7 +14,7 @@ export default class extends Controller {
 
   startSound() {
     this.sound = new Howl({
-      src: ['https://res.cloudinary.com/dcnaxhee4/video/upload/v1685351924/Holger_Czukay_-_Cool_In_The_Pool_TubeRipper.com_jwboed.mp3'],
+      src: ['https://res.cloudinary.com/dpe8hhwm3/video/upload/v1685475929/Holger_Czukay_-_Cool_In_The_Pool_TubeRipper.com_tgeyhe.mp3'],
       html5: true,
       autoplay: true,
       loop: true,
