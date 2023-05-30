@@ -104,7 +104,7 @@ export default class extends Controller {
 
     {
       this.gltfLoader = new GLTFLoader();
-      this.gltfLoader.load("https://res.cloudinary.com/dcnaxhee4/image/upload/v1684909005/25cl_can_yfipvc.gltf", (gltf) => {
+      this.gltfLoader.load("https://res.cloudinary.com/dpe8hhwm3/image/upload/v1685475895/25cl_can_zkqxm8.gltf", (gltf) => {
         this.model = gltf.scene;
         this.model.traverse((child) => {
           if ( child.isMesh && child.name == "250ml") {
