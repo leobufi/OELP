@@ -20,14 +20,24 @@
     box-shadow: -0.6em 0.6em $green;
     transition-property: box-shadow;
     transition-duration: 0.5s;
+
   }
+
 
   .pause-btn {
-    display: none;
-
-    &.bump {
-      animation: bounceIn;
-      animation-duration: 0.5s;
-    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .play-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

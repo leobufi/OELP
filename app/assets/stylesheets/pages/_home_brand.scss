@@ -1,10 +1,11 @@
 .home-section {
   .brand {
-    padding: 3em 15em;
+    padding: 8em 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 4em;
+    border-top: 2px solid $black;
 
     .baseline {
       display: flex;
@@ -121,7 +122,7 @@
 
   .left-side-umbrella {
     position: absolute;
-    top: 0em;
+    top: 2em;
     left: -8em;
     transform: rotate(45deg);
     z-index: -10000;
