@@ -79,7 +79,8 @@
   display: flex;
   justify-content: space-between;
   column-gap: 2em;
-  align-items: center;
+  align-items: flex-start;
+
 
   .infos {
     display: flex;
