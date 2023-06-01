@@ -2,7 +2,10 @@
 
   &.brand {
     border-top: 2px solid $black;
+    display: flex;
+    justify-content: space-between;
   }
+
   .brand {
     padding: 8em 15em;
     display: flex;
