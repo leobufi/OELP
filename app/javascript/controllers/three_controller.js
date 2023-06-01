@@ -11,7 +11,10 @@ export default class extends Controller {
   static targets = ["canva"]
 
   connect() {
-    // console.log("Hi from three js", this.canvaTarget, this.canvaTarget.offsetWidth, this.canvaTarget.offsetHeight);
+    console.log("Hi from three js", window.matchMedia("(max-width: 1024px)").matches);
+    console.log((this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*100);
+    console.log((this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*150);
+    console.log((window.innerWidth / window.innerHeight) * 28);
 
     this.scene = new THREE.Scene();
     // this.scene.background = new THREE.Color("rgb(254, 223, 146)");
@@ -98,8 +101,23 @@ export default class extends Controller {
 
     {
       // RATIO FOR CAN SCALLING \\
-      this.canX = (window.innerWidth / window.innerHeight) * 28;
-      this.canY = (window.innerWidth / window.innerHeight) * 33;
+      if (window.matchMedia("(max-width: 420px)").matches) {
+        this.canX = (window.innerWidth / window.innerHeight) * 127.5;
+        this.canY = (window.innerWidth / window.innerHeight) * 140;
+      } else if (window.matchMedia("(max-width: 920px)").matches) {
+        this.canX = (window.innerWidth / window.innerHeight) * 70;
+        this.canY = (window.innerWidth / window.innerHeight) * 80;
+      } else if (window.matchMedia("(max-width: 1024px)").matches) {
+        this.canX = (window.innerWidth / window.innerHeight) * 40;
+        this.canY = (window.innerWidth / window.innerHeight) * 45;
+      } else if (window.matchMedia("(max-width: 1440px)").matches) {
+        this.canX = (window.innerWidth / window.innerHeight) * 28;
+        this.canY = (window.innerWidth / window.innerHeight) * 33;
+      } else if (window.matchMedia("(max-width: 1920px)").matches) {
+        this.canX = (window.innerWidth / window.innerHeight) * 28;
+        this.canY = (window.innerWidth / window.innerHeight) * 33;
+      }
+
     }
 
     {

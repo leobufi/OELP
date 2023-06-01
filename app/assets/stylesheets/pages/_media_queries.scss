@@ -138,6 +138,16 @@ body {
     &.yellow {
       &.max-h {
         height: 150vh;
+
+        // &.cans {
+        //   .three-canvas {
+        //     column-gap: 0em;
+
+        //     .canva {
+        //       height: 60em;
+        //     }
+        //   }
+        // }
       }
     }
 
@@ -301,9 +311,9 @@ body {
   body {
     font-size: 1em;
 
-    .loader {
-      display: none;
-    }
+    // .loader {
+    //   display: none;
+    // }
 
     a {
       font-size: 2.5em;
@@ -364,6 +374,15 @@ body {
 
       &.top {
 
+        .mouettes {
+          .mouette-2 {
+            top: 31em;
+          }
+          .mouette-3 {
+            top: 15em;
+          }
+        }
+
         .logo-wrapper {
           animation-delay: 0s;
         }
@@ -372,16 +391,18 @@ body {
 
     &.yellow {
       &.max-h {
-        height: 120vh;
+        height: 130vh;
 
         &.cans {
+          padding: 25em 4em 8em 4em;
+
           .three-canvas {
             flex-direction: column;
             row-gap: 7em;
 
             .canva {
-              width: 30em;
-              height: 60em;
+              width: 50em;
+              height: 70em;
 
               .infos {
                 width: 6em;
@@ -404,11 +425,11 @@ body {
 
             .cans-grape {
               top: -22em;
-              right: -34em;
+              right: -27em;
             }
             .cans-glaciere {
               top: -16em;
-              left: -30em;
+              left: -22em;
             }
           }
         }
