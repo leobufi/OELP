@@ -306,6 +306,91 @@ body {
   }
 }
 
+@media(max-height: 400px) {
+
+  body {
+    font-size: 1em;
+  }
+
+  // HOME \\
+
+  .home-section {
+    height: 140vh;
+
+    &.min-h {
+      height: 80vh;
+    }
+
+    &.yellow {
+      &.max-h {
+        height: 240vh;
+      }
+    }
+
+    &.mid-h {
+      height: 160vh;
+    }
+
+    .curved-title {
+      row-gap: 7.5em;
+    }
+
+    .insta-link {
+      button {
+        &.insta-btn {
+          &.top {
+            a {
+              i {
+                font-size: 3em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // CONTACT \\
+
+  .form-raisin {
+    top: 1em;
+    left: 2em;
+  }
+  .form-raisin2 {
+    top: 1em;
+    right: 2em;
+  }
+  .form-glaciere {
+    top: 72em;
+    left: 6em;
+  }
+  .form-glaciere2 {
+    top: 72em;
+    right: 6em;
+  }
+
+  // DASHBOARD \\
+
+  .instagram-photos {
+
+    .card {
+      width: 15em;
+
+      .product-photo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // FORM \\
+
+  .form {
+    padding: 5em 5em;
+  }
+}
+
 @media(max-width: 420px) {
 
   body {
@@ -391,7 +476,7 @@ body {
 
     &.yellow {
       &.max-h {
-        height: 130vh;
+        height: 140vh;
 
         &.cans {
           padding: 25em 4em 8em 4em;
