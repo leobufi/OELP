@@ -306,6 +306,33 @@ body {
   }
 }
 
+@media(max-height: 900px) {
+
+  body {
+    font-size: 1em;
+  }
+
+  // HOME \\
+
+  .home-section {
+    overscroll-behavior: none;
+
+    &.min-h {
+      overscroll-behavior: none;
+    }
+
+    &.yellow {
+      &.max-h {
+        overscroll-behavior: none;
+      }
+    }
+
+    &.mid-h {
+      overscroll-behavior: none;
+    }
+  }
+}
+
 @media(max-height: 400px) {
 
   body {
@@ -316,14 +343,17 @@ body {
 
   .home-section {
     height: 140vh;
+    overscroll-behavior: none;
 
     &.min-h {
       height: 80vh;
+      overscroll-behavior: none;
     }
 
     &.yellow {
       &.max-h {
         height: 240vh;
+        overscroll-behavior: none;
 
         &.cans {
           .section-title {
@@ -352,6 +382,7 @@ body {
 
     &.mid-h {
       height: 160vh;
+      overscroll-behavior: none;
     }
 
     .curved-title {
@@ -418,7 +449,6 @@ body {
 
   body {
     font-size: 1em;
-
     // .loader {
     //   display: none;
     // }
@@ -476,6 +506,7 @@ body {
 
   .home-section {
     height: 35vh;
+    overscroll-behavior: none;
 
     &.min-h {
       height: 20vh;
@@ -500,6 +531,7 @@ body {
     &.yellow {
       &.max-h {
         height: 140vh;
+        overscroll-behavior: none;
 
         &.cans {
           padding: 25em 4em 8em 4em;
@@ -566,6 +598,7 @@ body {
 
     &.mid-h {
       height: 65vh;
+      overscroll-behavior: none;
 
       &.brand {
         padding: 12em 4em;
@@ -593,6 +626,7 @@ body {
 
     &.min-h {
       height: 30vh;
+      overscroll-behavior: none;
     }
 
     button {
