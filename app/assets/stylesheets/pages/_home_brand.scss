@@ -1,11 +1,14 @@
 .home-section {
+
+  &.brand {
+    border-top: 2px solid $black;
+  }
   .brand {
     padding: 8em 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 4em;
-    border-top: 2px solid $black;
 
     .baseline {
       display: flex;
