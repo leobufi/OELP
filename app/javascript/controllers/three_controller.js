@@ -5,9 +5,8 @@ import {OrbitControls} from "three/controls";
 
 // Connects to data-controller="three"
 export default class extends Controller {
-  static values = {
-    label: String
-  }
+  static values = { label: String }
+
   static targets = ["canva"]
 
   connect() {
@@ -102,8 +101,8 @@ export default class extends Controller {
     {
       // RATIO FOR CAN SCALLING \\
       if (window.matchMedia("(max-width: 420px)").matches) {
-        this.canX = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*67.5;
-        this.canY = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*75;
+        this.canX = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*70;
+        this.canY = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*77.5;
       } else if (window.matchMedia("(max-width: 920px)").matches) {
         this.canX = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*80;
         this.canY = (this.canvaTarget.offsetWidth / this.canvaTarget.offsetHeight)*100;
@@ -113,11 +112,11 @@ export default class extends Controller {
         this.canX = (window.innerWidth / window.innerHeight) * 40;
         this.canY = (window.innerWidth / window.innerHeight) * 45;
       } else if (window.matchMedia("(max-width: 1440px)").matches) {
-        this.canX = (window.innerWidth / window.innerHeight) * 28;
-        this.canY = (window.innerWidth / window.innerHeight) * 33;
+        this.canX = (window.innerWidth / window.innerHeight) * 27.5;
+        this.canY = (window.innerWidth / window.innerHeight) * 32.5;
       } else if (window.matchMedia("(max-width: 1920px)").matches) {
-        this.canX = (window.innerWidth / window.innerHeight) * 28;
-        this.canY = (window.innerWidth / window.innerHeight) * 33;
+        this.canX = (window.innerWidth / window.innerHeight) * 27.5;
+        this.canY = (window.innerWidth / window.innerHeight) * 32.5;
       }
 
     }
