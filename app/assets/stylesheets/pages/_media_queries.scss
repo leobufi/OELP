@@ -324,6 +324,29 @@ body {
     &.yellow {
       &.max-h {
         height: 240vh;
+
+        &.cans {
+          .section-title {
+
+            &.translate {
+              transform: translateY(0em);
+            }
+          }
+
+          .stars {
+            .stars0 {
+              &.translate {
+                transform: translate(-10em, -4em);
+              }
+            }
+
+            .stars1 {
+              &.translate {
+                transform: translate(-14em, 8em);
+              }
+            }
+          }
+        }
       }
     }
 
@@ -480,6 +503,26 @@ body {
 
         &.cans {
           padding: 25em 4em 8em 4em;
+
+          .section-title {
+            &.translate {
+              transform: translateY(0em);
+            }
+          }
+
+          .stars {
+            .stars0 {
+              &.translate {
+                transform: translate(-8em, 0em);
+              }
+            }
+
+            .stars1 {
+              &.translate {
+                transform: translate(-14em, 15em);
+              }
+            }
+          }
 
           .three-canvas {
             flex-direction: column;
