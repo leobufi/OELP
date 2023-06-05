@@ -33,6 +33,7 @@ export default class extends Controller {
     // this.renderer.shadowMap.type = THREE.PCFShadowMap;
 
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.renderer.setPixelRatio(window.devicePixelRatio);
 
     this.renderer.setSize( this.canvaTarget.offsetHeight, this.canvaTarget.offsetHeight, false );
     this.element.appendChild( this.renderer.domElement );
@@ -118,7 +119,6 @@ export default class extends Controller {
         this.canX = (window.innerWidth / window.innerHeight) * 27.5;
         this.canY = (window.innerWidth / window.innerHeight) * 32.5;
       }
-
     }
 
     {
